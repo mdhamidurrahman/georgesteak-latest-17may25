@@ -1,8 +1,9 @@
 import React from 'react'
+import About from './components/About'
 
 const Home = () => {
   return (
-    <div className='text-[20px] font-mono text-blue-950'>Home</div>
+    <About/>
   )
 }
 
