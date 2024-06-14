@@ -8,11 +8,22 @@ body {
     font-family: "Gotham-Bold";
 }
 
-.aboutUs {
-    background-image: url(../public/assets/image/paboutus02.jpg);
+.aboutUs,
+.dinner {
+
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
+    padding-bottom: 100px;
+}
+
+.aboutUs {
+    background-image: url(../public/assets/image/paboutus02.jpg);
+}
+
+.dinner {
+    background-image: url(../public/assets/image/pmenus.jpg);
+    height: 500px;
 }
 
 .aboutUs h3 {
@@ -52,4 +63,9 @@ body {
     letter-spacing: 4px;
     color: #e1b728;
     z-index: 0;
+}
+@media only screen and (max-width:1024px){
+    .aboutUs{
+        padding: 0 20px 50px 20px;
+    }
 }
