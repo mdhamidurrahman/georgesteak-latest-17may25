@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Gotham-Bold";
+}
+
+.aboutUs {
+    background-image: url(../public/assets/image/paboutus02.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.aboutUs h3 {
+    color: #580000;
+}
+
+.animal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    padding-bottom: 30px;
+    z-index: 0;
+
+    
+}
+
+.goerg-p p,
+.aboutUs h3 {
+    Font-size: 13px;
+    line-height: 23px;
+    Font-weight: 300;
+}
+
+.goerg-p p {
+    color: #000;
+    margin-bottom: 20px;
+
+}
+
+.animal h2 {
+    position: absolute;
+    top: 75px;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 34px;
+    letter-spacing: 4px;
+    color: #e1b728;
+    z-index: 0;
+}

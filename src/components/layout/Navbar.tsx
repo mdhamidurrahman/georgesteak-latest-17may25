@@ -45,7 +45,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className={`bg-[#400000] main-tool-bar  flex items-center justify-center ${isScrolled ? 'main-tool-bar--scrolled' : 'border-b-2 border-[#ffd400]'}`}>
+      <div className={`bg-[#400000] main-tool-bar z-50 flex items-center justify-center ${isScrolled ? 'main-tool-bar--scrolled' : 'border-b-2 border-[#ffd400]'}`}>
         <div className="flex justify-center items-end gap-10">
           {linksToShow.map((link, index) => (
             <a key={index} href="#" className=
