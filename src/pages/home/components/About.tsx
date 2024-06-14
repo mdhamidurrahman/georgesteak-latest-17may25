@@ -1,12 +1,14 @@
 import React from 'react'
 
+
 export default function About() {
   return (
-    <div className='aboutUs'>
+    <div>
+    <div className='aboutUs container mx-auto'>
       <div className="flex flex-row">
         <div className="basis-1/2 goerg-p">
           <div className="animal">
-            <img src="assets\image\hudsonlogo_noname.svg" alt="George Italian Seafood & Steakhouse" className='w-2/4'/>
+            <img src="assets\image\hudsonlogo_noname.svg" alt="George Italian Seafood & Steakhouse" className='w-2/4' />
             <h2>ABOUT US</h2>
           </div>
           <p>George Italian Seafood & Steakhouse offers exceptional Italian Cuisine with an American flair
@@ -43,6 +45,10 @@ export default function About() {
           <p>Every Sunday</p>
           <p>12:00 pm - 4:00 pm</p>
         </div>
+      </div>
+    </div>
+      <div className="dinner">
+          {/* <img src="assets\image\pmenus.jpg" alt="" /> */}
       </div>
     </div>
   )
