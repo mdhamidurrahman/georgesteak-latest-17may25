@@ -3,19 +3,19 @@
 @tailwind utilities;
 
 .main-tool-bar {
-    height: 200px;  
+    height: 160px;  
     text-align: center;
     display: flex;
-    padding-bottom: 30px;
     align-items: end;
     justify-content: center;
     position: fixed;
     width: 100%;
     left: 0;
     top: 0;
-    transition: ease 0.4s;
+    transition: ease 0.5s;
   }
   
   .main-tool-bar--scrolled {
     height: 75px;
   }
+  
