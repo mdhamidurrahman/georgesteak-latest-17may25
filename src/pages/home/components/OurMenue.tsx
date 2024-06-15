@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function OurMenue() {
     return (
-        <div className='bg-white'>
+        <div className='bg-white menuMain'>
             <div className="animal">
                 <img src="assets\image\hudsonlogo_noname.svg" alt="George Italian" className='w-1/4' />
                 <h2>OUR MENUS</h2>
@@ -14,21 +14,21 @@ export default function OurMenue() {
                         <img src="assets\image\menus01.jpg" alt="" />
                         <div className="gallery-item-overlay">
                             <h3>LUNCH PRIX-FIXED</h3>
-                            
+
                         </div>
                     </div>
                     <div className="gallery-item">
                         <img src="assets\image\menus05.jpg" alt="" />
                         <div className="gallery-item-overlay">
                             <h3>LUNCH & DINNER</h3>
-                            
+
                         </div>
                     </div>
                     <div className="gallery-item">
                         <img src="assets\image\menus04.jpg" alt="" />
                         <div className="gallery-item-overlay">
                             <h3>SUNDAY BRUNCH</h3>
-                          
+
                         </div>
                     </div>
 
@@ -36,7 +36,7 @@ export default function OurMenue() {
                         <img src="assets\image\menusbarmenu.jpg" alt="" />
                         <div className="gallery-item-overlay">
                             <h3>BAR MENU</h3>
-                         
+
                         </div>
                     </div>
                     <div className="gallery-item">
@@ -53,7 +53,9 @@ export default function OurMenue() {
                     </div>
 
                 </div>
+                <a href="#">PARTY PACKAGES</a>
             </div>
+            <img src="assets\image\preservations.jpg" alt="" />
         </div>
     )
 }
