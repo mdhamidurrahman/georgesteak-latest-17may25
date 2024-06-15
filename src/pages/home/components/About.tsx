@@ -4,7 +4,7 @@ import React from 'react'
 export default function About() {
   return (
     <div>
-    <div className='aboutUs container mx-auto'>
+    <div className='aboutUs'>
       <div className="flex flex-row">
         <div className="basis-1/2 goerg-p">
           <div className="animal">
