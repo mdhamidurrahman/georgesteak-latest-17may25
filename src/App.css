@@ -10,6 +10,7 @@ body {
 
 .myMain{
     position: relative;
+    margin-right: 20px;
 }
 .aboutUs,
 .dinner {
@@ -22,6 +23,8 @@ body {
 
 .aboutUs {
     background-image: url(../public/assets/image/paboutus02.jpg);
+    margin: 20% 0 0 0;
+    padding: 50px 20px 50px 20px;
 }
 
 .dinner {
@@ -84,7 +87,61 @@ body {
     z-index: -1;
 }
 
-.slick_img img{
+/* .slick_img img{
     width: 100%;
     height: 100vh;
+} */
+
+
+
+/* ======= Our Menue =========== */
+.galery{
+    display: grid;
+    place-items: center;
 }
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    width: 80%;
+  }
+  
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* opacity: 0; */
+    transition: opacity 0.3s ease;
+  }
+  
+  /* .gallery-item:hover img {
+    transform: scale(1.2);
+  } */
+  
+  .gallery-item:hover .gallery-item-overlay {
+    opacity: 1;
+    background-color: transparent;
+  }

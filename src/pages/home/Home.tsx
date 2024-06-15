@@ -1,12 +1,13 @@
 import React from 'react'
 import About from './components/About'
-import SlickSlider from '../../components/SlickSlider'
+import OurMenue from './components/OurMenue'
 
 
 const Home = () => {
   return (
     <>
     <About/>
+    <OurMenue/>
     </>
   )
 }
