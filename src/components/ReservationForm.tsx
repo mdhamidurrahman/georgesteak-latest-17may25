@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export default function ReservationForm() {
 
@@ -95,7 +95,7 @@ export default function ReservationForm() {
                     />
                   </div>
                 </div>
-                <button type="submit">Submit</button>
+                <button type="submit">SEND</button>
             </form>
             <div className="cusinoImg">
                 {/* <img src="assets\image\pcuisine.jpg" alt="" /> */}

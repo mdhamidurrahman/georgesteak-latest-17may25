@@ -1,9 +1,22 @@
 @media only screen and (max-width: 1024px) {
+    .myMain{
+        margin: 0;
+    }
     .aboutUs {
         padding: 0 20px 50px 20px;
     }
 
     .animal {
         padding-bottom: 0 !important;
+    }
+
+    input[type="phone"], input[type="date"]{
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width:991px){
+    input[type="phone"], input[type="date"]{
+        width: 250px;
     }
 }
