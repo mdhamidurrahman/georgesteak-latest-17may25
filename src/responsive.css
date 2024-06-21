@@ -7,11 +7,20 @@
     }
 
     .animal {
-        padding-bottom: 0 !important;
+        padding-bottom: 0;
     }
 
     input[type="phone"], input[type="date"]{
         width: 300px;
+    }
+
+    /* ======== OUR CUISINE ======= */
+    .gallery, .icon_boxx{
+        width: 100%;
+        gap: 6px;
+    }
+    .reservation .galery {
+        padding: 0 0px 20px 0px;
     }
 }
 

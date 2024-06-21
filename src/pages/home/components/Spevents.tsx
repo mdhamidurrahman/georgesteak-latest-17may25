@@ -3,11 +3,12 @@ export default function Spevents() {
 
     return (
         <section className='spevent reservation'>
-            <div className="animal">
-                <img src="assets\image\hudsonlogo_noname.svg" alt="George Italian Seafood & Steakhouse" className='w-1/4' />
-                <h2>EVENTS & SPECIALS</h2>
-            </div>
 
+            <div className="estd">
+                <div className="animal">
+                    <h2>EVENTS & SPECIALS</h2>
+                </div>
+            </div>
             <div className="galery">
                 <div className="gallery eventSpecial">
                     <div className="gallery-item">
@@ -44,7 +45,7 @@ export default function Spevents() {
                 <a href="#">JOIN OUR MAILING LIST</a>
             </div>
             <div className="spacialEvents">
-               
+
             </div>
         </section>
     )

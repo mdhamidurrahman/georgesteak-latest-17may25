@@ -20,10 +20,12 @@ export default function ReservationForm() {
 
     return (
         <section className='reservation'>
-            <div className="animal">
-                <img src="assets\image\hudsonlogo_noname.svg" alt="George Italian Seafood & Steakhouse" className='w-1/4' />
-                <h2>RESERVATIONS</h2>
+            <div className="estd">
+                <div className="animal">
+                    <h2>RESERVATIONS</h2>
+                </div>
             </div>
+            
             <div className="bookTable">
                 <p>To book your table online at George Italian Seafood & Steakhouse at Greenwich CT, please enter the info and a manager will contact you soon.
                     We have a 10 minute grace period. For more than 8 guests please fill out

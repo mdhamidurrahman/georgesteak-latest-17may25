@@ -2,9 +2,10 @@
 export default function ContactUs() {
     return (
         <section className='bg-white py-10'>
-            <div className="animal">
-                <img src="assets\image\hudsonlogo_noname.svg" alt="George Italian Seafood & Steakhouse" className='w-1/4' />
-                <h2>CONTACT US</h2>
+            <div className="estd">
+                <div className="animal">
+                    <h2>CONTACT US</h2>
+                </div>
             </div>
 
             <div className="container">
@@ -48,17 +49,17 @@ export default function ContactUs() {
                 </div>
 
                 <form className="userInfo">
-                   <div className="sentdata">
-                   <div className="form-group">
-                        <label htmlFor="name">FIRST NAME</label>
-                        <input type="text"/>
+                    <div className="sentdata">
+                        <div className="form-group">
+                            <label htmlFor="name">FIRST NAME</label>
+                            <input type="text" />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="name">EMAIL</label>
+                            <input type="text" />
+                        </div>
+                        <a href="#">SEND</a>
                     </div>
-                    <div className="form-group">
-                        <label htmlFor="name">EMAIL</label>
-                        <input type="text"/>
-                    </div>
-                   <a href="#">SEND</a>
-                   </div>
                 </form>
             </div>
         </section>

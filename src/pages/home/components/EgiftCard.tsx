@@ -2,9 +2,11 @@
 export default function EgiftCard() {
     return (
         <section className='bg-white'>
-            <div className="animal">
-                <img src="assets\image\hudsonlogo_noname.svg" alt="George Italian Seafood & Steakhouse" className='w-1/4' />
-                <h2>E-GIFT CARDS</h2>
+
+            <div className="estd">
+                <div className="animal">
+                    <h2>E-GIFT CARDS</h2>
+                </div>
                 <p>The George Seafood & Steakhouse e-Gift Card in Greenwich CT is the perfect gift for family members, friends, or important clients on your list</p>
             </div>
 

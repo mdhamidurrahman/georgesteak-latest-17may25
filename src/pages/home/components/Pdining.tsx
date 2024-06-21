@@ -2,12 +2,18 @@
 export default function Pdining() {
     return (
         <section className='bg-white'>
-            <div className="animal pdingin">
-                <img src="assets\image\hudsonlogo_noname.svg" alt="George Italian Seafood & Steakhouse" className='w-1/4' />
-                <h2>PRIVATE DINING</h2>
+
+            <div className="estd">
+                <div className="animal">
+                    <h2>PRIVATE DINING</h2>
+                </div>
+
+            </div>
+            <div className="pdingin">
                 <p >George Italian Seafood & Steakhouse is the perfect place to HOST YOUR SPECIAL EVENT up to 200 guests, either if is a RECEPTIONS,
                     WEDDINGS, or a CORPORATE EVENTS,  we'll customized your needs to make an unforgettable experience.</p>
                 <a href="#">PARTY MENUS</a>
+
             </div>
 
             <div className="galery pDining">
@@ -45,7 +51,7 @@ export default function Pdining() {
                 </div>
                 <a href="#">JOIN OUR MAILING LIST</a>
             </div>
-            
+
         </section>
     )
 }

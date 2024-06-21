@@ -19,7 +19,8 @@ body {
 .spacialEvents,
 .bearParty,
 .bear,
-.dindingTable {
+.dindingTable,
+.animal {
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -41,15 +42,32 @@ body {
     color: #580000;
 }
 
+.estd {
+    display: grid;
+    place-items: center;
+}
+
 .animal {
     position: relative;
+    width: 400px;
+    height: 200px;
+    background-image: url(../public/assets/image/hudsonlogo_noname.svg);
+    background-size: contain;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     place-items: center;
-    padding-bottom: 30px;
+}
+
+.animal h2 {
+    position: absolute;
+    top: 120px;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 34px;
+    letter-spacing: 4px;
+    color: #e1b728;
     z-index: 0;
-
-
 }
 
 .goerg-p p,
@@ -65,17 +83,6 @@ body {
     color: #000;
     margin-bottom: 20px;
 
-}
-
-.animal h2 {
-    position: absolute;
-    top: 75px;
-    font-size: 30px;
-    font-weight: 300;
-    line-height: 34px;
-    letter-spacing: 4px;
-    color: #e1b728;
-    z-index: 0;
 }
 
 /* ======= Slick Slider ======== */
@@ -171,7 +178,8 @@ body {
 /* ======== Reservation Form ====== */
 
 .reservation,
-.eventEquity, .social-icons {
+.eventEquity,
+.social-icons {
     background-color: #310303;
     padding: 50px 0 50px 0;
     text-align: center;
@@ -352,11 +360,12 @@ form button:hover {
 }
 
 /* ======== E-GIFT CARDS ======== */
-.animal p {
+.estd p {
     font-size: 15px;
     width: 600px;
     color: #000;
     text-align: center;
+    padding-bottom: 30px;
 }
 
 .george,
@@ -427,14 +436,19 @@ form button:hover {
 }
 
 /* ========== PRIVATE DINING ========= */
-.pDining {
-    text-align: center;
+.pdingin {
+    display: grid;
+    place-items: center;
 }
 
 .pdingin p {
-    width: 770px;
-    padding: 30px 0;
+    width: 820px;
+    padding-bottom: 20px;
     text-align: justify;
+}
+
+.pDining {
+    text-align: center;
 }
 
 .pDining :is(.prix, .hour) h2 {
@@ -463,7 +477,6 @@ form button:hover {
 /* ========== EVENT INQUIRY ========= */
 .eventInqury p {
     width: 480px;
-    padding-top: 20px;
     color: #fff;
 }
 
@@ -504,14 +517,17 @@ button[type='submit'] {
     letter-spacing: 4px;
     color: #e1b728;
 }
-.mailingList .hline{
+
+.mailingList .hline {
     background-color: #bea570;
 }
+
 .mailingList p {
     width: 500px;
 }
 
 /* ===== Contact form ==== */
+
 .userInfo {
     display: grid;
     place-items: center;
@@ -526,7 +542,7 @@ button[type='submit'] {
     padding: 20px;
 }
 
-.form-group{
+.form-group {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -539,7 +555,8 @@ button[type='submit'] {
     border: 1px solid #bea570;
     border-radius: 5px;
 }
-.userInfo a{
+
+.userInfo a {
     width: 35%;
     font-size: 12px;
     line-height: 27px;
@@ -550,41 +567,47 @@ button[type='submit'] {
     color: #d3af37;
     text-align: center;
 }
-.userInfo a:hover{
+
+.userInfo a:hover {
     color: #ffd400;
 }
 
 /* ========== Socila Icons ======== */
-.social_icon{
+.social_icon {
     display: flex;
     justify-content: center;
     place-items: center;
     gap: 3rem;
 }
-.social_icon i{
+
+.social_icon i {
     font-size: 30px;
     color: #fff;
     opacity: .75;
 }
-.social_icon i:hover{
+
+.social_icon i:hover {
     opacity: 1;
 }
 
-.contetn > a{
+.contetn>a {
     display: block;
     color: #ffd400;
     font-size: 13px;
     margin: 35px 0 20px 0;
 }
-.contetn > a:hover{
+
+.contetn>a:hover {
     color: #fff;
 }
-.contetn p{
+
+.contetn p {
     font-size: 11px;
     line-height: 13px;
     font-weight: 300;
     color: #fff;
 }
-.contetn p a:hover{
+
+.contetn p a:hover {
     color: #ffd400;
 }

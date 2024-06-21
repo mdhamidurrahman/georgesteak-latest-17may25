@@ -19,9 +19,11 @@ export default function EventEnquiryForm() {
     };
     return (
         <section className='eventEquity'>
-            <div className="animal eventInqury">
-                <img src="assets\image\hudsonlogo_noname.svg" alt="George Italian Seafood & Steakhouse" className='w-1/4' />
+
+            <div className="estd eventInqury">
+                <div className="animal ">
                 <h2>EVENT INQUIRY</h2>
+                </div>
                 <p>To book your private event at George Italian Restaurants in Greenwich, CT please enter your info & someone will contact you shortly</p>
             </div>
 

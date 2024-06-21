@@ -2,9 +2,11 @@
 export default function OurCuisine() {
     return (
         <section className='reservation'>
-            <div className="animal">
-                <img src="assets\image\hudsonlogo_noname.svg" alt="George Italian Seafood & Steakhouse" className='w-1/4' />
-                <h2>OUR CUISINE</h2>
+
+            <div className="estd">
+                <div className="animal">
+                    <h2>OUR CUISINE</h2>
+                </div>
             </div>
 
             <div className="galery">
