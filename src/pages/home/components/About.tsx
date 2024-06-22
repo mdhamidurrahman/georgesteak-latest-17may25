@@ -1,4 +1,4 @@
-import React from "react";
+
 import ScrollImage from "./ScrollImage";
 
 export default function About() {

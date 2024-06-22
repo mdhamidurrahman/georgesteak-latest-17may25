@@ -1,4 +1,4 @@
-import React from 'react';
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -9,9 +9,11 @@ export default function SlickSlider() {
         autoplay:true,
         autoplaySpeed: 5000,
         infinite: true,
-        speed: 500,
+        speed: 1000,
         slidesToShow: 1,
         slidesToScroll: 1,
+        fade:true,
+        pauseOnHover:false,
         responsive: [
             {
               breakpoint: 1024,
