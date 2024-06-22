@@ -9,9 +9,6 @@ import EventEnquiryForm from './components/EventEnquiryForm'
 import ContactUs from './components/ContactUs'
 import Socialicon from './components/Socialicon'
 import TableBooking from './components/TableBooking'
-import { GoogleMap } from '@react-google-maps/api'
-
-
 const Home = () => {
   return (
     <>
@@ -25,7 +22,6 @@ const Home = () => {
     <Pdining/>
     <EventEnquiryForm/>
     <ContactUs/>
-    {/* <GoogleMap/> */}
     <Socialicon/>
     </>
   );
