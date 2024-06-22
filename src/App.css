@@ -10,8 +10,13 @@ body {
     background-position: center !important; */
 }
 
+.myMain {
+    position: relative;
+    margin-right: 20px;
+}
+
 .aboutUs,
-.dinner {
+.dinner, .cusinoImg {
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -22,6 +27,8 @@ body {
 
 .aboutUs {
     background-image: url(../public/assets/image/paboutus02.jpg);
+    margin: 20% 0 0 0;
+    padding: 50px 20px 50px 20px;
 }
 
 .dinner {
@@ -41,11 +48,12 @@ body {
     padding-bottom: 30px;
     z-index: 0;
 
-    
+
 }
 
 .goerg-p p,
-.aboutUs h3 {
+.aboutUs h3,
+.bookTable p {
     Font-size: 13px;
     line-height: 23px;
     Font-weight: 300;
@@ -67,8 +75,196 @@ body {
     color: #e1b728;
     z-index: 0;
 }
-@media only screen and (max-width:1024px){
-    .aboutUs{
-        padding: 0 20px 50px 20px;
-    }
+
+/* ======= Slick Slider ======== */
+.slick_diner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+
+
+/* ======= Our Menue =========== */
+
+.galery {
+    display: grid;
+    padding: 30px 0px 110px 0px;
+    place-items: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    width: 80%;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-item-overlay {
+    opacity: 1;
+    background-color: transparent;
+}
+
+.galery a {
+    width: 315px;
+    text-align: center;
+    padding: 8px;
+    font-size: 12px;
+    line-height: 30px;
+    font-weight: 300;
+    background: #580000;
+    color: #ecc633;
+    border-radius: 4px;
+}
+
+.galery a:hover {
+    background-color: #310303;
+}
+
+/* ======== Reservation Form ====== */
+
+.reservation {
+    background-color: #310303;
+    padding: 50px 0 50px 0;
+    text-align: center;
+}
+
+.reservation form {
+    display: grid;
+    grid-template-columns: auto;
+    place-items: start;
+    justify-content: center;
+    grid-gap: 1rem;
+    margin-top: 20px;
+}
+
+.bookTable {
+    display: grid;
+    place-items: center;
+}
+
+.bookTable p {
+    font-size: 15px;
+    width: 780px;
+    color: #fff;
+}
+
+.bookTable p a {
+    color: #d3af37;
+}
+
+/* ======= Form ===== */
+.formField,
+.spReuest {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    gap: 1rem;
+}
+
+.formField div,
+.spReuest div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    place-items: start;
+}
+
+:is(.nameEmail, .formField, .spReuest) input,
+button[type='submit'] {
+    color: #fff;
+    background: transparent;
+    border: 1px solid #d3af37;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 300;
+    padding: 16px 6px 6px;
+}
+
+label {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.nameEmail input,
+input[type="request"],
+button[type='submit'] {
+    /* width: 452px; */
+    width: 100%;
+}
+
+input[type='request'] {
+    height: 100px;
+}
+
+input[type="phone"],
+input[type="date"] {
+    width: 318px;
+}
+
+input[type="time"] {
+    width: 187px;
+}
+
+input[type="number"] {
+    width: 82px;
+}
+
+form input:is(:hover, :focus-visible) {
+    border-color: #ffd400;
+}
+
+form button:hover {
+    border-color: #ffd400;
+}
+
+/* ========= Cuisine ========== */
+.cusinoImg{
+    height: 400px;
+    background-image: url(../public/assets/image/pcuisine.jpg);
+    background-position: bottom;
+    margin-top: 130px;
+}
+
+.cuisineGalery .gallery-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(75%);
+  }
+.cuisineGalery .gallery-item-overlay {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
 }
