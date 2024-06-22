@@ -1,18 +1,18 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Gotham-Bold";
-    /* background-image: url(../public/assets/image/paboutus02.jpg);
+  font-family: "Gotham-Bold";
+  /* background-image: url(../public/assets/image/paboutus02.jpg);
     background-position: center !important; */
 }
 
 .myMain {
-    position: relative;
-    margin-right: 20px;
+  position: relative;
+  margin-right: 20px;
 }
 
 .aboutUs,
@@ -23,158 +23,153 @@ body {
 .bear,
 .dindingTable,
 .animal {
-
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .aboutUs {
-    background-image: url(../public/assets/image/paboutus02.jpg);
-    /* margin: 20% 0 0 0; */
-    padding: 50px 20px 50px 20px;
+  background-image: url(../public/assets/image/paboutus02.jpg);
+  /* margin: 20% 0 0 0; */
+  padding: 50px 20px 50px 20px;
 }
 
 .dinner {
-    background-image: url(../public/assets/image/pmenus.jpg);
-    height: 500px;
+  background-image: url(../public/assets/image/pmenus.jpg);
+  height: 500px;
 }
 
 .aboutUs h3 {
-    color: #580000;
+  color: #580000;
 }
 
 .estd {
-    display: grid;
-    place-items: center;
+  display: grid;
+  place-items: center;
 }
 
 .animal {
-    position: relative;
-    width: 400px;
-    height: 200px;
-    background-image: url(../public/assets/image/hudsonlogo_noname.svg);
-    background-size: contain;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    place-items: center;
+  position: relative;
+  width: 400px;
+  height: 200px;
+  background-image: url(../public/assets/image/hudsonlogo_noname.svg);
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  place-items: center;
 }
 
 .animal h2 {
-    position: absolute;
-    top: 120px;
-    font-size: 30px;
-    font-weight: 300;
-    line-height: 34px;
-    letter-spacing: 4px;
-    color: #e1b728;
-    z-index: 0;
+  position: absolute;
+  top: 120px;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 34px;
+  letter-spacing: 4px;
+  color: #e1b728;
+  z-index: 0;
 }
 
 .goerg-p p,
 .aboutUs h3,
 .bookTable p,
 .mailingList p {
-    Font-size: 13px;
-    line-height: 23px;
-    Font-weight: 300;
+  font-size: 13px;
+  line-height: 23px;
+  font-weight: 300;
 }
 
 .goerg-p p {
-    color: #000;
-    margin-bottom: 20px;
-
+  color: #000;
+  margin-bottom: 20px;
 }
 
 /* ======= Slick Slider ======== */
 .slick_diner {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
 }
-
-
 
 /* ======= Our Menue =========== */
 
 .galery {
-    display: grid;
-    padding: 30px 0px 110px 0px;
-    place-items: center;
+  display: grid;
+  padding: 30px 0px 0px 0px;
+  place-items: center;
 }
 
 .gallery,
 .icon_boxx {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 20px;
-    justify-content: center;
-    place-items: center;
-    padding: 20px;
-    width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  justify-content: center;
+  place-items: center;
+  padding: 20px;
+  width: 80%;
 }
 
 .gallery-item {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .gallery-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
 }
 
 .gallery-item-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 80px 0 10px 0;
-    transition: opacity 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 0 10px 0;
+  transition: opacity 0.3s ease;
 }
 
 .gallery-item-overlay i {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .gallery-item-overlay h3 {
-    font-size: 14px;
-    line-height: 17px;
+  font-size: 14px;
+  line-height: 17px;
 }
 
 .gallery-item:hover .gallery-item-overlay {
-    opacity: 1;
-    background-color: transparent;
+  opacity: 1;
+  background-color: transparent;
 }
 
 :is(.galery, .cAmount, .pdingin) a {
-
-    width: 315px;
-    text-align: center;
-    padding: 8px;
-    font-size: 12px;
-    line-height: 30px;
-    font-weight: 300;
-    background: #580000;
-    color: #ecc633;
-    border-radius: 4px;
+  width: 315px;
+  text-align: center;
+  padding: 8px;
+  font-size: 12px;
+  line-height: 30px;
+  font-weight: 300;
+  background: #580000;
+  color: #ecc633;
+  border-radius: 4px;
 }
 
 .galery a:hover {
-    background-color: #310303;
+  background-color: #310303;
 }
 
 /* ======== Reservation Form ====== */
@@ -182,314 +177,332 @@ body {
 .reservation,
 .eventEquity,
 .social-icons {
-    background-color: #310303;
-    padding: 50px 0 50px 0;
-    text-align: center;
+  background-color: #310303;
+  padding: 50px 0 50px 0;
+  text-align: center;
 }
 
 :is(.reservation, .eventEquity) form {
-    display: grid;
-    grid-template-columns: auto;
-    place-items: start;
-    justify-content: center;
-    grid-gap: 1rem;
-    margin-top: 20px;
+  display: grid;
+  grid-template-columns: auto;
+  place-items: start;
+  justify-content: center;
+  grid-gap: 1rem;
+  margin-top: 20px;
 }
 
-
-
 .bookTable {
-    display: grid;
-    place-items: center;
+  display: grid;
+  place-items: center;
 }
 
 .bookTable p {
-    font-size: 15px;
-    width: 780px;
-    color: #fff;
+  font-size: 15px;
+  width: 780px;
+  color: #fff;
 }
 
 .bookTable p a {
-    color: #d3af37;
+  color: #d3af37;
 }
 
 /* ======= Form ===== */
 .formField,
 .spReuest {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    place-items: center;
-    gap: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  gap: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="phone"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="number"]:focus,
+input[type="request"]:focus {
+  outline: none;
+  border-color: #ffd400 !important;
+  box-shadow: 0 0 8px rgba(255, 212, 0, 0.5), 0 0 8px rgba(255, 212, 0, 0.5);
+  transition-timing-function: ease-in-out;
+  transition-duration: 1s;
+  transition-delay: 0s;
+}
+
+input:required:invalid:focus {
+  background-color: red;
+}
+input:required:invalid:active {
+  background-color: red;
 }
 
 .formField div,
 .spReuest div {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    place-items: start;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  place-items: start;
 }
 
 :is(.nameEmail, .formField, .spReuest) input,
-button[type='submit'] {
-    color: #fff;
-    background: transparent;
-    border: 1px solid #d3af37;
-    border-radius: 4px;
-    font-size: 12px;
-    font-weight: 300;
-    padding: 16px 6px 6px;
+button[type="submit"] {
+  color: #fff;
+  background: transparent;
+  border: 1px solid #d3af37;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 300;
+  padding: 16px 6px 6px;
 }
 
 label {
-    font-size: 12px;
-    font-weight: 300;
+  font-size: 12px;
+  font-weight: 300;
 }
 
 .nameEmail input,
 input[type="request"],
-button[type='submit'] {
-    width: 100%;
+button[type="submit"] {
+  width: 100%;
 }
 
-input[type='request'] {
-    height: 100px;
+input[type="request"] {
+  height: 100px;
 }
 
 input[type="phone"],
 input[type="date"] {
-    width: 318px;
+  width: 318px;
 }
 
 input[type="time"] {
-    width: 187px;
+  width: 187px;
 }
 
 input[type="number"] {
-    width: 82px;
+  width: 82px;
 }
 
 form input:is(:hover, :focus-visible),
 button:hover {
-    border-color: #ffd400 !important;
-    box-shadow: 0 0 8px rgba(255, 212, 0, .5), 0 0 8px rgba(255, 212, 0, .5);
-    transition-timing-function: ease-in-out;
-    transition-duration: 1s;
-    transition-delay: 0s;
+  border-color: #ffd400 !important;
+  box-shadow: 0 0 8px rgba(255, 212, 0, 0.5), 0 0 8px rgba(255, 212, 0, 0.5);
+  transition-timing-function: ease-in-out;
+  transition-duration: 1s;
+  transition-delay: 0s;
 }
 
 form button:hover {
-    border-color: #ffd400;
+  border-color: #ffd400;
 }
 
 .reservation .galery {
-    padding: 30px 0px 50px 0px;
+  padding: 30px 0px 50px 0px;
 }
 
 /* ========= Cuisine ========== */
 .cusinoImg {
-    height: 400px;
-    background-image: url(../public/assets/image/pcuisine.jpg);
-    margin-top: 130px;
+  height: 400px;
+  background-image: url(../public/assets/image/pcuisine.jpg);
+  margin-top: 130px;
 }
 
 .cuisineGalery .gallery-item:hover img {
-    transform: scale(1.1);
-    filter: brightness(75%);
+  transform: scale(1.1);
+  filter: brightness(75%);
 }
 
 .cuisineGalery .gallery-item-overlay {
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .bear {
-    background-image: url(../public/assets/image/pevents.jpg);
-    height: 400px;
+  background-image: url(../public/assets/image/pevents.jpg);
+  height: 400px;
 }
-
 
 /* ======== EVENTS & SPECIALS ========== */
 
 .spevent,
 .spevent .galery {
-    padding: 0;
+  padding: 0;
 }
 
 .eventSpecial {
-    grid-template-columns: auto auto;
-    grid-column-gap: 4rem;
+  grid-template-columns: auto auto;
+  grid-column-gap: 4rem;
 }
 
 :is(.prix, .hour) img {
-    border-radius: 5px;
-    width: 400px;
-    height: 145px;
+  border-radius: 5px;
+  width: 400px;
+  height: 145px;
 }
 
 :is(.prix, .hour) h2 {
-    font-size: 17px;
-    font-weight: 300;
-    line-height: 34px;
-    color: #ffd400;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 34px;
+  color: #ffd400;
 }
 
 :is(.prix, .hour) p a {
-    color: #ffd400;
-    background: transparent;
+  color: #ffd400;
+  background: transparent;
 }
 
 :is(.prix, .hour) p {
-    color: #fff;
+  color: #fff;
 }
 
-.spevent .galery>a {
-    background: transparent;
-    border: 1px solid #d3af37;
-    color: #d3af37;
-    margin: 20px 0 80px;
+.spevent .galery > a {
+  background: transparent;
+  border: 1px solid #d3af37;
+  color: #d3af37;
+  margin: 20px 0 80px;
 }
 
-.spevent .galery>a:hover {
-    border-color: #ffd400;
+.spevent .galery > a:hover {
+  border-color: #ffd400;
 }
 
 .spacialEvents {
-    background-image: url(../public/assets/image/pgiftcards.jpg);
-    height: 500px;
+  background-image: url(../public/assets/image/pgiftcards.jpg);
+  height: 500px;
 }
 
 /* ======== E-GIFT CARDS ======== */
 .estd p {
-    font-size: 15px;
-    width: 600px;
-    color: #000;
-    text-align: center;
-    padding-bottom: 30px;
+  font-size: 15px;
+  width: 600px;
+  color: #000;
+  text-align: center;
+  padding-bottom: 30px;
 }
 
 .george,
 .seeFood,
 .egiftc {
-    display: flex;
-    justify-content: center;
-    place-items: center;
-    gap: 5rem;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  gap: 5rem;
 }
 
 .seeFood {
-    justify-content: end;
+  justify-content: end;
 }
 
 .cAmount {
-    display: grid;
-    place-items: center;
-    justify-content: start;
-    grid-template-columns: auto;
-    grid-gap: 1rem;
+  display: grid;
+  place-items: center;
+  justify-content: start;
+  grid-template-columns: auto;
+  grid-gap: 1rem;
 }
 
 .cAmount h2 {
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 19px;
-    letter-spacing: 2px;
-    color: #310303;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  letter-spacing: 2px;
+  color: #310303;
 }
 
 .cAmount a,
 .pdingin a {
-    width: 286px;
-    background-color: #400000;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0s;
-    transition-duration: 1s;
+  width: 286px;
+  background-color: #400000;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+  transition-duration: 1s;
 }
 
 .cAmount a:hover,
 .pdingin a:hover {
-    color: #ffd400;
+  color: #ffd400;
 }
 
 .hline {
-    width: 101px;
-    height: 1px;
-    background: #400000;
+  width: 101px;
+  height: 1px;
+  background: #400000;
 }
 
 .egiftc p {
-    width: 500px;
-    font-size: 10px;
-    text-align: center;
-    font-weight: 300;
-    color: #000;
-    line-height: 17px;
+  width: 500px;
+  font-size: 10px;
+  text-align: center;
+  font-weight: 300;
+  color: #000;
+  line-height: 17px;
 }
 
 .egiftc p a {
-    color: #8c752a;
+  color: #8c752a;
 }
 
 .bearParty {
-    background-image: url(../public/assets/image/pparties.jpg);
-    height: 500px;
+  background-image: url(../public/assets/image/pparties.jpg);
+  height: 500px;
 }
 
 /* ========== PRIVATE DINING ========= */
 .pdingin {
-    display: grid;
-    place-items: center;
+  display: grid;
+  place-items: center;
 }
 
 .pdingin p {
-    width: 820px;
-    padding-bottom: 20px;
-    text-align: justify;
+  width: 820px;
+  padding-bottom: 20px;
+  text-align: justify;
 }
 
 .pDining {
-    text-align: center;
+  text-align: center;
 }
 
 .pDining :is(.prix, .hour) h2 {
-    color: #1b1819;
+  color: #1b1819;
 }
 
 .pDining :is(.prix, .hour) img {
-    width: 440px;
-    height: 196px;
+  width: 440px;
+  height: 196px;
 }
 
 .pDining :is(.prix, .hour) P {
-    color: #1b1819;
+  color: #1b1819;
 }
 
 .pDining :is(.prix, .hour) P a {
-    color: #8c752a;
+  color: #8c752a;
 }
 
 .pDining :is(.prix, .hour) P a:hover {
-    color: #ffd400;
-    background: transparent;
+  color: #ffd400;
+  background: transparent;
 }
-
 
 /* ========== EVENT INQUIRY ========= */
 .eventInqury p {
-    width: 480px;
-    color: #fff;
+  width: 480px;
+  color: #fff;
 }
 
-button[type='submit'] {
-    color: #e1b728;
+button[type="submit"] {
+  color: #e1b728;
 }
 
 .dindingTable {
-    background-image: url(../public/assets/image/contactus01.jpg);
-    margin-top: 75px;
-    height: 500px;
+  background-image: url(../public/assets/image/contactus01.jpg);
+  margin-top: 75px;
+  height: 500px;
 }
 
 /* ========== Contact Us ========= */
@@ -497,119 +510,125 @@ button[type='submit'] {
 .icon,
 .icon-box,
 .mailingList {
-    display: grid;
-    gap: 0.5rem;
-    text-align: center;
-    place-items: center;
+  display: grid;
+  gap: 0.5rem;
+  text-align: center;
+  place-items: center;
 }
 
-.icon_boxx>.icon-box a {
-    display: block;
-    width: 150px;
-
+.icon_boxx > .icon-box a {
+  display: block;
+  width: 150px;
 }
 
 .center-box {
-    grid-column: 1 / 4;
+  grid-column: 1 / 4;
 }
 
 .mailingList h2 {
-    font-size: 30px;
-    line-height: 36px;
-    letter-spacing: 4px;
-    color: #e1b728;
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: 4px;
+  color: #e1b728;
 }
 
 .mailingList .hline {
-    background-color: #bea570;
+  background-color: #bea570;
 }
 
 .mailingList p {
-    width: 500px;
+  width: 500px;
 }
 
 /* ===== Contact form ==== */
 
 .userInfo {
-    display: grid;
-    place-items: center;
+  display: grid;
+  place-items: center;
 }
 
 .sentdata {
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    place-items: end;
-    gap: 0.5rem;
-    padding: 20px;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  place-items: end;
+  gap: 0.5rem;
+  padding: 20px;
 }
 
 .form-group {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    place-items: start;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  place-items: start;
 }
 
 .sentdata input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #bea570;
-    border-radius: 5px;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #bea570;
+  border-radius: 5px;
 }
 
 .userInfo a {
-    width: 35%;
-    font-size: 12px;
-    line-height: 27px;
-    padding: 7px;
-    background-color: #400000;
-    border-radius: 5px;
-    line-height: 27px;
-    color: #d3af37;
-    text-align: center;
+  width: 35%;
+  font-size: 12px;
+  line-height: 27px;
+  padding: 7px;
+  background-color: #400000;
+  border-radius: 5px;
+  line-height: 27px;
+  color: #d3af37;
+  text-align: center;
 }
 
 .userInfo a:hover {
-    color: #ffd400;
+  color: #ffd400;
 }
 
 /* ========== Socila Icons ======== */
 .social_icon {
-    display: flex;
-    justify-content: center;
-    place-items: center;
-    gap: 3rem;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  gap: 3rem;
 }
 
 .social_icon i {
-    font-size: 30px;
-    color: #fff;
-    opacity: .75;
+  font-size: 30px;
+  color: #fff;
+  opacity: 0.75;
 }
 
 .social_icon i:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
-.contetn>a {
-    display: block;
-    color: #ffd400;
-    font-size: 13px;
-    margin: 35px 0 20px 0;
+.contetn > a {
+  display: block;
+  color: #ffd400;
+  font-size: 13px;
+  margin: 35px 0 20px 0;
 }
 
-.contetn>a:hover {
-    color: #fff;
+.contetn > a:hover {
+  color: #fff;
 }
 
 .contetn p {
-    font-size: 11px;
-    line-height: 13px;
-    font-weight: 300;
-    color: #fff;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: 300;
+  color: #fff;
 }
 
 .contetn p a:hover {
-    color: #ffd400;
+  color: #ffd400;
+}
+
+/* ========== Booking Table ======== */
+.backDrop {
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(0.5px);
+  backdrop-filter: blur(0.2px);
 }

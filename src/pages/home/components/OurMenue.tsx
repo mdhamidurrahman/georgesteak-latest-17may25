@@ -1,61 +1,143 @@
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+
+gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
 export default function OurMenue() {
-    return (
-        <div className='bg-white menuMain'>
+  const firstImageRef = useRef(null);
+  const secondImageRef = useRef(null);
+  const imageRef = useRef(null);
 
-            <div className="estd">
-                <div className="animal">
-                    <h2>OUR MENUS</h2>
-                </div>
-            </div>
-            <div className="galery">
-                <div className="gallery">
-                    <div className="gallery-item">
-                        <img src="assets\image\menus01.jpg" alt="" />
-                        <div className="gallery-item-overlay">
-                            <h3>LUNCH PRIX-FIXED</h3>
+  useEffect(() => {
+    gsap.to(imageRef.current, {
+      motionPath: {
+        path: [
+          { x: 0, y: 0 },
+          { x: -300, y: 550 },
+        ],
+        curviness: 0.25, 
+        autoRotate: false,
+      },
+      duration: 20, 
+      scrollTrigger: {
+        trigger: imageRef.current,
+        start: "top bottom",
+        end: "bottom bottom",
+        scrub: 1,
+      },
+    });
 
-                        </div>
-                    </div>
-                    <div className="gallery-item">
-                        <img src="assets\image\menus05.jpg" alt="" />
-                        <div className="gallery-item-overlay">
-                            <h3>LUNCH & DINNER</h3>
+    gsap.to(firstImageRef.current, {
+      motionPath: {
+        path: [
+          { x: 0, y: 0 },
+          { x: 100, y: -100 },
+        ],
+        curviness: 0.25,
+        autoRotate: false,
+      },
+      scrollTrigger: {
+        trigger: firstImageRef.current,
+        start: "top center",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
 
-                        </div>
-                    </div>
-                    <div className="gallery-item">
-                        <img src="assets\image\menus04.jpg" alt="" />
-                        <div className="gallery-item-overlay">
-                            <h3>SUNDAY BRUNCH</h3>
+    gsap.to(secondImageRef.current, {
+      x: -400,
+      scrollTrigger: {
+        trigger: secondImageRef.current,
+        start: "top center",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+  }, []);
 
-                        </div>
-                    </div>
-
-                    <div className="gallery-item">
-                        <img src="assets\image\menusbarmenu.jpg" alt="" />
-                        <div className="gallery-item-overlay">
-                            <h3>BAR MENU</h3>
-
-                        </div>
-                    </div>
-                    <div className="gallery-item">
-                        <img src="assets\image\menusdrinks01.jpg" alt="" />
-                        <div className="gallery-item-overlay">
-                            <h3>cocktails</h3>
-                        </div>
-                    </div>
-                    <div className="gallery-item">
-                        <img src="assets\image\menus03.jpg" alt="" />
-                        <div className="gallery-item-overlay">
-                            <h3>DESSERTS</h3>
-                        </div>
-                    </div>
-
-                </div>
-                <a href="#">PARTY PACKAGES</a>
-            </div>
-            <img src="assets\image\preservations.jpg" alt="" />
+  return (
+    <div className="bg-white menuMain">
+      <div className="relative">
+        <div className="w-full flex justify-end">
+          <img
+            ref={imageRef}
+            className="absolute flex z-[999] h-40 top-[-20px] w-52"
+            src="https://georgesteakhouse.com/images/artchef.svg?crc=6725776"
+            alt=""
+          />
         </div>
-    )
+      </div>
+
+      <div className="estd">
+        <div className="animal">
+          <h2>OUR MENUS</h2>
+        </div>
+      </div>
+      <div className="galery">
+        <div className="gallery">
+          <div className="gallery-item">
+            <img src="assets\\image\\menus01.jpg" alt="" />
+            <div className="gallery-item-overlay">
+              <h3>LUNCH PRIX-FIXED</h3>
+            </div>
+          </div>
+          <div className="gallery-item">
+            <img src="assets\\image\\menus05.jpg" alt="" />
+            <div className="gallery-item-overlay">
+              <h3>LUNCH & DINNER</h3>
+            </div>
+          </div>
+          <div className="gallery-item">
+            <img src="assets\\image\\menus04.jpg" alt="" />
+            <div className="gallery-item-overlay">
+              <h3>SUNDAY BRUNCH</h3>
+            </div>
+          </div>
+
+          <div className="gallery-item">
+            <img src="assets\\image\\menusbarmenu.jpg" alt="" />
+            <div className="gallery-item-overlay">
+              <h3>BAR MENU</h3>
+            </div>
+          </div>
+          <div className="gallery-item">
+            <img src="assets\\image\\menusdrinks01.jpg" alt="" />
+            <div className="gallery-item-overlay">
+              <h3>cocktails</h3>
+            </div>
+          </div>
+          <div className="gallery-item">
+            <img src="assets\\image\\menus03.jpg" alt="" />
+            <div className="gallery-item-overlay">
+              <h3>DESSERTS</h3>
+            </div>
+          </div>
+        </div>
+        <a className="relative z-0" href="#">PARTY PACKAGES</a>
+      </div>
+      <div className="w-full flex justify-between relative">
+        <div>
+          <img
+            ref={firstImageRef}
+            className="flex absolute bottom-5 z-50 h-40  w-52"
+            src="https://georgesteakhouse.com/images/artlobster.svg?crc=3776414"
+            alt=""
+          />
+        </div>
+
+        <div>
+          <img
+            ref={secondImageRef}
+            className="h-20 w-40"
+            src="https://georgesteakhouse.com/images/artfish.svg?crc=257803479"
+            alt=""
+          />
+        </div>
+      </div>
+      <img src="assets\\image\\preservations.jpg" alt="" />
+    </div>
+  );
 }
+

@@ -1,7 +1,7 @@
 
 const TableBooking = () => {
   return (
-    <div className="pt-[350px] bg-transparent font-light flex justify-center items-center flex-col">
+    <div className="pt-[350px] backDrop font-light flex justify-center items-center flex-col">
       <div className="text-center flex flex-col justify-center  items-center text-white">
         <div className="text-[50px] leading-[75px] tracking-[4px]">
           ITALIAN SEAFOOD & STEAKHOUSE
