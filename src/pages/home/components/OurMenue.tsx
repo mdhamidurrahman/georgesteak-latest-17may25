@@ -1,13 +1,13 @@
-import React from 'react'
 
 export default function OurMenue() {
     return (
         <div className='bg-white menuMain'>
-            <div className="animal">
-                <img src="assets\image\hudsonlogo_noname.svg" alt="George Italian" className='w-1/4' />
-                <h2>OUR MENUS</h2>
-            </div>
 
+            <div className="estd">
+                <div className="animal">
+                    <h2>OUR MENUS</h2>
+                </div>
+            </div>
             <div className="galery">
                 <div className="gallery">
                     <div className="gallery-item">

@@ -10,13 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-google-maps/api": "^2.19.3",
     "gsap": "^3.12.5",
     "react": "^18.3.1",
     "react-dom": "^18.2.0",
     "react-fancybox": "^0.2.5",
     "react-router-dom": "^6.23.1",
     "react-slick": "^0.30.2",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "use-places-autocomplete": "^4.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
