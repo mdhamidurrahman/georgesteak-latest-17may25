@@ -21,8 +21,12 @@ const TableBooking = () => {
       >
         BOOK YOUR TABLE
       </div>
-      <div className="flex justify-center py-[800px] items-center text-center">
-      <img className=" h-[60px] w-[70px] " src="https://georgesteakhouse.com/images/adacompliancelogo_2x69x57.png?crc=3880310862" alt="img" />
+      <div className="flex justify-center pt-[400px] pb-[200px] items-center text-center">
+        <img
+          className=" h-[60px] w-[70px] "
+          src="https://georgesteakhouse.com/images/adacompliancelogo_2x69x57.png?crc=3880310862"
+          alt="img"
+        />
       </div>
     </div>
   );

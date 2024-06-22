@@ -27,7 +27,7 @@ body {
 
 .aboutUs {
     background-image: url(../public/assets/image/paboutus02.jpg);
-    margin: 20% 0 0 0;
+    /* margin: 20% 0 0 0; */
     padding: 50px 20px 50px 20px;
 }
 
