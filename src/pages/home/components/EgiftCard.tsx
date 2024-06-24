@@ -28,7 +28,7 @@ export default function EgiftCard() {
                     in Greenwich CT George Steakhouse within 24 hours, please check your spam folder or email us at
                     <a href="#">giftcard@nycrestaurant.com</a> </p>
             </div>
-        <ScrollImage imageUrl={imageUrl} height={400} />
+        <ScrollImage imageUrl={imageUrl} height={700} />
         </section>
     )
 }

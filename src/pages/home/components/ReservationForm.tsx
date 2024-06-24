@@ -87,7 +87,7 @@ export default function ReservationForm() {
         </div>
         <button type="submit">SEND</button>
       </form>
-      <ScrollImage imageUrl={imageUrl} height={400}/>
+      <ScrollImage imageUrl={imageUrl} height={700}/>
     </section>
   );
 }

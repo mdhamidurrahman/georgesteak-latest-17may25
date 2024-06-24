@@ -45,7 +45,7 @@ const imageUrl="assets/image/pgiftcards.jpg"
                 </div>
                 <a href="#">JOIN OUR MAILING LIST</a>
             </div>
-            <ScrollImage imageUrl={imageUrl} height={400}/>
+            <ScrollImage imageUrl={imageUrl} height={700}/>
             
         </section>
     )

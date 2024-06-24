@@ -137,7 +137,7 @@ const imageUrl="assets/image/preservations.jpg"
           />
         </div>
       </div>
-      <ScrollImage imageUrl={imageUrl} height={500} />
+      <ScrollImage imageUrl={imageUrl} height={800} />
     </div>
   );
 }

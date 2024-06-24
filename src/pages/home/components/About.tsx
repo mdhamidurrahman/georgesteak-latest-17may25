@@ -63,7 +63,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <ScrollImage imageUrl={imageUrl1} height={400}/>
+      <ScrollImage imageUrl={imageUrl1} height={700}/>
     </div>
   );
 }
