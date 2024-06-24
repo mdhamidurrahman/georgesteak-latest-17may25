@@ -5,6 +5,8 @@ import Home from './pages/home/Home';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import SlickSlider from './components/SlickSlider';
+import { GoogleMap } from '@react-google-maps/api';
+import GoogleMapReact from './pages/home/components/GoogleMapReact';
 function App() {
   return (
     <main className='myMain'>
