@@ -1,5 +1,7 @@
+import ScrollImage from "./ScrollImage";
 
 export default function OurCuisine() {
+    const imageUrl="assets/image/pevents.jpg"
     return (
         <section className='reservation'>
 
@@ -80,9 +82,8 @@ export default function OurCuisine() {
                     </div>
                 </div>
             </div>
-
-            <div className="bear">
-            </div>
+            
+            <ScrollImage imageUrl={imageUrl} height={400}/>
         </section>
     )
 }

@@ -3,10 +3,11 @@ import ScrollImage from "./ScrollImage";
 
 export default function About() {
   const imageUrl = "assets/image/paboutus01.jpg";
+  const imageUrl1 = "assets/image/pmenus.jpg";
   return (
     <div>
       {/* ====== Image ======== */}
-      <ScrollImage imageUrl={imageUrl} />
+      <ScrollImage imageUrl={imageUrl} height={700} />
       {/* ====== About US ======== */}
       <div className="aboutUs">
         <div className="flex flex-row">
@@ -62,9 +63,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="dinner">
-        {/* <img src="assets\image\pmenus.jpg" alt="" /> */}
-      </div>
+      <ScrollImage imageUrl={imageUrl1} height={400}/>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import About from './components/About'
 import OurMenue from './components/OurMenue'
-import ReservationForm from '../../components/ReservationForm'
+import ReservationForm from './components/ReservationForm'
 import OurCuisine from './components/OurCuisine'
 import Spevents from './components/Spevents'
 import EgiftCard from './components/EgiftCard'

@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+import ScrollImage from "./ScrollImage";
 
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
@@ -9,7 +10,7 @@ export default function OurMenue() {
   const firstImageRef = useRef(null);
   const secondImageRef = useRef(null);
   const imageRef = useRef(null);
-
+const imageUrl="assets/image/preservations.jpg"
   useEffect(() => {
     gsap.to(imageRef.current, {
       motionPath: {
@@ -136,7 +137,7 @@ export default function OurMenue() {
           />
         </div>
       </div>
-      <img src="assets\\image\\preservations.jpg" alt="" />
+      <ScrollImage imageUrl={imageUrl} height={500} />
     </div>
   );
 }
