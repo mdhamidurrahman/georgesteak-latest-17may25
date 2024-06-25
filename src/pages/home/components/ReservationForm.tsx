@@ -53,7 +53,7 @@ export default function ReservationForm() {
             <label htmlFor="phone">PHONE</label>
             <input id="phone" type="phone" />
           </div>
-          <div>
+          <div className="input-date">
             <label htmlFor="date">DATE</label>
             <DatePicker selected={date}  onChange={(date: Date | null) => setDate(date)}  />
           </div>

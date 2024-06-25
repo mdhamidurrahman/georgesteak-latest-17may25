@@ -22,7 +22,6 @@
 
     .launch article {
         width: 100%;
-        padding-right: 100px;
     }
 
     .launch article div {
@@ -44,7 +43,7 @@
 
     /* ======== OUR CUISINE ======= */
     .gallery,
-    .icon_boxx {
+    .icon_boxx, .goerg-p p {
         width: 100%;
     }
 
@@ -98,7 +97,22 @@
 @media only screen and (max-width:991px) {
 
     input[type="phone"],
-    input[type="date"] {
-        width: 250px;
+    .input-date input[type='text'],
+    .react-datepicker__input-container>input {
+        width: 250px !important;
     }
+
+    input[type="time"] {
+        width: 130px;
+    }
+}
+
+@media only screen and (max-width:767px) {
+
+    .reservFrom input,
+    .eventEquity form input,
+    .pdingin p, .icon_boxx>.icon-box a, .launch article div {
+        width: 100% !important;
+    }
+
 }

@@ -30,7 +30,7 @@ const imageUrl="assets/image/contactus01.jpg"
         </p>
       </div>
 
-      <div className="container">
+      
         <form onSubmit={handleSubmit} className="text-white pb-16">
           <div className="formField nameEmail">
             <div>
@@ -85,7 +85,7 @@ const imageUrl="assets/image/contactus01.jpg"
           </div>
           <button type="submit">SEND</button>
         </form>
-      </div>
+      
       <ScrollImage imageUrl={imageUrl} height={700}/>
     </section>
   );
