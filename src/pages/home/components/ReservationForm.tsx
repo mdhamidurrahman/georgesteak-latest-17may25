@@ -1,18 +1,19 @@
 import { useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import ScrollImage from "./ScrollImage";
 
 export default function ReservationForm() {
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState<Date | null>(new Date());
   const [time, setTime] = useState("");
   const [guests, setGuests] = useState(1);
+  const imageUrl="assets/image/pcuisine.jpg"
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    // Handle form submission here, e.g., send data to server
     console.log("Date:", date);
     console.log("Time:", time);
     console.log("Number of Guests:", guests);
-    // Reset form fields
-    setDate("");
     setTime("");
     setGuests(1);
   };
@@ -31,11 +32,11 @@ export default function ReservationForm() {
           Greenwich CT, please enter the info and a manager will contact you
           soon. We have a 10 minute grace period. For more than 8 guests please
           fill out
-          <a href="#">party form</a>.
+          <a href="#"> party form</a>.
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="text-white">
+      <form onSubmit={handleSubmit} className="text-white reservFrom">
         <div className="formField nameEmail">
           <div>
             <label htmlFor="name">NAME</label>
@@ -54,13 +55,7 @@ export default function ReservationForm() {
           </div>
           <div>
             <label htmlFor="date">DATE</label>
-            <input
-              type="date"
-              id="date"
-              value={date}
-              onChange={(e) => setDate(e.target.value)}
-              required
-            />
+            <DatePicker selected={date}  onChange={(date: Date | null) => setDate(date)}  />
           </div>
           <div>
             <label htmlFor="time">TIME</label>
@@ -92,9 +87,7 @@ export default function ReservationForm() {
         </div>
         <button type="submit">SEND</button>
       </form>
-      <div className="cusinoImg">
-        {/* <img src="assets\image\pcuisine.jpg" alt="" /> */}
-      </div>
+      <ScrollImage imageUrl={imageUrl} height={400}/>
     </section>
   );
 }

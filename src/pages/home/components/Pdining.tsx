@@ -1,7 +1,7 @@
 
 export default function Pdining() {
     return (
-        <section className='bg-white'>
+        <section className='bg-white priDining'>
 
             <div className="estd">
                 <div className="animal">
@@ -49,7 +49,7 @@ export default function Pdining() {
                         </div>
                     </div>
                 </div>
-                <a href="#">JOIN OUR MAILING LIST</a>
+                {/* <a href="#">JOIN OUR MAILING LIST</a> */}
             </div>
 
         </section>
