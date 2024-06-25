@@ -32,11 +32,11 @@ export default function ReservationForm() {
           Greenwich CT, please enter the info and a manager will contact you
           soon. We have a 10 minute grace period. For more than 8 guests please
           fill out
-          <a href="#">party form</a>.
+          <a href="#"> party form</a>.
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="text-white pb-16">
+      <form onSubmit={handleSubmit} className="text-white reservFrom">
         <div className="formField nameEmail">
           <div>
             <label htmlFor="name">NAME</label>

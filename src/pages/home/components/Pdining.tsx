@@ -1,7 +1,7 @@
 
 export default function Pdining() {
     return (
-        <section className='bg-white'>
+        <section className='bg-white priDining'>
 
             <div className="estd">
                 <div className="animal">

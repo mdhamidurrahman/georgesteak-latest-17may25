@@ -1,31 +1,104 @@
 @media only screen and (max-width: 1024px) {
-    .myMain{
+    .myMain {
         margin: 0;
     }
+
+    /* ========= About us ====== */
     .aboutUs {
-        padding: 0 20px 50px 20px;
+        padding: 0 80px 50px 80px;
+        background-image: none;
+        background-color: #fff;
+        text-align: justify;
+    }
+
+    .about-us,
+    .george {
+        flex-direction: column;
+    }
+
+    :is(.goerg-, .aboutUs, .bookTable, .mailingList) :is(p, h3) {
+        font-size: 16px;
+    }
+
+    .launch article {
+        width: 100%;
+        padding-right: 100px;
+    }
+
+    .launch article div {
+        width: 25%
+    }
+
+    .artcontent {
+        display: none !important;
     }
 
     .animal {
         padding-bottom: 0;
     }
 
-    input[type="phone"], input[type="date"]{
+    input[type="phone"],
+    input[type="date"] {
         width: 300px;
     }
 
     /* ======== OUR CUISINE ======= */
-    .gallery, .icon_boxx{
+    .gallery,
+    .icon_boxx {
         width: 100%;
-        gap: 6px;
     }
+
     .reservation .galery {
         padding: 0 0px 20px 0px;
     }
+
+    /* ======= Events Spacials ======= */
+    .eventSpecial {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+    }
+
+    :is(.eventSpecial) :is(.gallery-item, img) {
+        width: 100%;
+    }
+
+    .spevent .galery>a {
+        margin: 20px 0 50px;
+    }
+
+    /* ======= E- GIFT CARDS ======= */
+    .george {
+        gap: 2rem;
+    }
+
+    .seeFood,
+    .cAmount {
+        justify-content: center;
+    }
+
+    .egiftc p {
+        width: 78%;
+        font-size: 12px;
+    }
+
+    /* ======= PRIVATE DINING ======= */
+    .priDining {
+        padding: 0 0 50px 0;
+    }
+
+    .pDining .gallery-item {
+        display: grid;
+    }
+
+    .pDining :is(.prix, .hour) img {
+        width: 100%;
+    }
 }
 
-@media only screen and (max-width:991px){
-    input[type="phone"], input[type="date"]{
+@media only screen and (max-width:991px) {
+
+    input[type="phone"],
+    input[type="date"] {
         width: 250px;
     }
 }

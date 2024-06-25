@@ -21,13 +21,22 @@ export default function OurCuisine() {
                         </div>
                     </div>
                     <div className="gallery-item">
-                        <img src="/assets/image/f03.jpg" alt="Image 2" />
+                        <img src="/assets/image/f02.jpg" alt="Image 2" />
+                        <div className="gallery-item-overlay">
+                            <i className="fa fa-plus-square-o" aria-hidden="true"></i>
+                            <h3>Maryland Crab Cake</h3>
+
+                        </div>
+                    </div>
+                    <div className="gallery-item">
+                        <img src="assets/image/f03.jpg" alt="Image 3" />
                         <div className="gallery-item-overlay">
                             <i className="fa fa-plus-square-o" aria-hidden="true"></i>
                             <h3>Baked Clams Oreganata</h3>
 
                         </div>
                     </div>
+
                     <div className="gallery-item">
                         <img src="assets/image/f04.jpg" alt="Image 3" />
                         <div className="gallery-item-overlay">
@@ -36,13 +45,11 @@ export default function OurCuisine() {
 
                         </div>
                     </div>
-
                     <div className="gallery-item">
-                        <img src="assets/image/f05.jpg" alt="Image 3" />
+                        <img src="/assets/image/f05.jpg" alt="Image 3" />
                         <div className="gallery-item-overlay">
                             <i className="fa fa-plus-square-o" aria-hidden="true"></i>
-                            <h3>Cavatelli</h3>
-
+                            <h3>Cavatelli </h3>
                         </div>
                     </div>
                     <div className="gallery-item">
@@ -53,7 +60,7 @@ export default function OurCuisine() {
                         </div>
                     </div>
                     <div className="gallery-item">
-                        <img src="/assets/image/f07.jpg" alt="Image 3" />
+                        <img src="assets/image/f07.jpg" alt="Image 3" />
                         <div className="gallery-item-overlay">
                             <i className="fa fa-plus-square-o" aria-hidden="true"></i>
                             <h3>Grilled Lamb Chops</h3>
@@ -71,13 +78,6 @@ export default function OurCuisine() {
                         <div className="gallery-item-overlay">
                             <i className="fa fa-plus-square-o" aria-hidden="true"></i>
                             <h3>Dry Aged Porterhouse</h3>
-                        </div>
-                    </div>
-                    <div className="gallery-item">
-                        <img src="assets/image/f04.jpg" alt="Image 3" />
-                        <div className="gallery-item-overlay">
-                            <i className="fa fa-plus-square-o" aria-hidden="true"></i>
-                            <h3>Image Title 3</h3>
                         </div>
                     </div>
                 </div>
