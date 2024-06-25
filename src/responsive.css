@@ -43,7 +43,8 @@
 
     /* ======== OUR CUISINE ======= */
     .gallery,
-    .icon_boxx, .goerg-p p {
+    .icon_boxx,
+    .goerg-p p {
         width: 100%;
     }
 
@@ -105,15 +106,25 @@
     input[type="time"] {
         width: 130px;
     }
+
+    .pdingin p,
+    .bookTable p {
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width:767px) {
 
     .reservFrom input,
     .eventEquity form input,
-    .pdingin p, .icon_boxx>.icon-box a, .launch article div {
+    .pdingin p,
+    .icon_boxx>.icon-box a,
+    .launch article div, .estd p {
         width: 100% !important;
     }
     
 
+    .center-box {
+        grid-column: 2 / 3;
+    }
 }
