@@ -5,7 +5,7 @@ export default function OurCuisine() {
     return (
         <section className='reservation'>
 
-            <div className="estd">
+            <div id="gallery" className="estd">
                 <div className="animal">
                     <h2>OUR CUISINE</h2>
                 </div>

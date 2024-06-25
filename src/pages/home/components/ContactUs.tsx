@@ -2,7 +2,7 @@
 export default function ContactUs() {
     return (
         <section className='bg-white py-10'>
-            <div className="estd">
+            <div id="contact" className="estd">
                 <div className="animal">
                     <h2>CONTACT US</h2>
                 </div>

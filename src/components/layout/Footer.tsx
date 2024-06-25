@@ -18,9 +18,9 @@ const Footer = () => {
   return (
     <>
       <div
-        className={`bg-[#400000] border-t border-[#ffd400]  fixed gap-6 text-center pt-2 bottom-0 w-full h-12 flex  items-start justify-center`}
+        className={`bg-[#400000] hidden border-t border-[#ffd400]  fixed gap-6 text-center pt-2 bottom-0 w-full h-12 lg:flex  items-start justify-center`}
       >
-        <div className="flex justify-end gap-10 w-[60%]">
+        <div className="flex justify-end gap-10 w-[80%]">
           {data.map((link, index) => (
             <div key={index} className="flex opacity-[0.7] hover:opacity-[1] justify-center text-center items-center gap-2">
               <img className="h-3 w-3" src={link.image} alt="icon" />

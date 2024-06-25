@@ -3,7 +3,7 @@ export default function Pdining() {
     return (
         <section className='bg-white priDining'>
 
-            <div className="estd">
+            <div id="private-dining" className="estd">
                 <div className="animal">
                     <h2>PRIVATE DINING</h2>
                 </div>

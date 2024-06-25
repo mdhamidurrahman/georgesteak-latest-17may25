@@ -20,7 +20,7 @@ export default function ReservationForm() {
 
   return (
     <section className="reservation">
-      <div className="estd">
+      <div id="reservation" className="estd">
         <div className="animal">
           <h2>RESERVATIONS</h2>
         </div>

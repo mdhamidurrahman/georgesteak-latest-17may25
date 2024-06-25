@@ -9,18 +9,15 @@ export default function EventEnquiryForm() {
 const imageUrl="assets/image/contactus01.jpg"
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    // Handle form submission here, e.g., send data to server
     console.log("Date:", date);
     console.log("Time:", time);
     console.log("Number of Guests:", guests);
-    // Reset form fields
-
     setTime("");
     setGuests(1);
   };
   return (
     <section className="eventEquity">
-      <div className="estd eventInqury">
+      <div id="event-inquiry" className="estd eventInqury">
         <div className="animal ">
           <h2>EVENT INQUIRY</h2>
         </div>

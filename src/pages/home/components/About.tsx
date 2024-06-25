@@ -8,7 +8,7 @@ export default function About() {
     <section>
       <ScrollImage imageUrl={imageUrl} height={700} />
 
-      <div className="aboutUs">
+      <div id="about" className="aboutUs">
         <div className=" about-us ">
           <div className="basis-1/2 goerg-p">
             <div className="estd">

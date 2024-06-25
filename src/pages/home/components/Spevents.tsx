@@ -5,7 +5,7 @@ const imageUrl="assets/image/pgiftcards.jpg"
     return (
         <section className='spevent reservation'>
 
-            <div className="estd">
+            <div id="events-specials" className="estd">
                 <div className="animal">
                     <h2>EVENTS & SPECIALS</h2>
                 </div>

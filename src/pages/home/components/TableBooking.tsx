@@ -1,7 +1,7 @@
 
 const TableBooking = () => {
   return (
-    <div className=" lg:pt-[350px] pt-[100px] backDrop font-light flex justify-center items-center flex-col">
+    <div id="home" className=" lg:pt-[350px] pt-[100px] backDrop font-light flex justify-center items-center flex-col">
        <div className="hidden lg:hidden sm:block">
         <img className="h-[460px] w-[423px]" src="assets/image/estd.svg" alt="imag" />
        </div>

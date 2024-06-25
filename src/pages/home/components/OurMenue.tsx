@@ -59,7 +59,7 @@ const imageUrl="assets/image/preservations.jpg"
   }, []);
 
   return (
-    <div className="bg-white menuMain">
+    <div id="menus" className="bg-white menuMain">
       <div className="relative">
         <div className="w-full flex justify-end">
           <img

@@ -5,7 +5,7 @@ export default function EgiftCard() {
     return (
         <section className='bg-white'>
 
-            <div className="estd">
+            <div id="gift-cards" className="estd">
                 <div className="animal">
                     <h2>E-GIFT CARDS</h2>
                 </div>
