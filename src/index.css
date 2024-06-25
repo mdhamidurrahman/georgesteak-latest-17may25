@@ -14,6 +14,18 @@
     top: 0;
     transition: ease 0.5s;
   }
+  .main-tool-bar-mobile{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+  .main-tool-bar-meduim{
+    width: 100%;
+    left: 0;
+    top: 0;
+
+  }
   
   .main-tool-bar--scrolled {
     height: 75px;

@@ -2,15 +2,13 @@ import './App.css'
 import './responsive.css'
 import { Routes, Route,} from "react-router-dom";
 import Home from './pages/home/Home';
-import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import SlickSlider from './components/SlickSlider';
-import { GoogleMap } from '@react-google-maps/api';
-import GoogleMapReact from './pages/home/components/GoogleMapReact';
+import NavBar from './components/layout/Navbar';
 function App() {
   return (
     <main className='myMain'>
-     <Navbar/>
+     <NavBar/>
       <SlickSlider/>
      <Routes>
      <Route path="/" element={<Home />} />

@@ -4,8 +4,16 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Gotham-Book";
+  src: url("../public/assets/font/Gotham-Book.otf");
+}
+.native {
+  font-family: "Gotham-Book", sans-serif;
+}
+
 body {
-  font-family: "Gotham-Bold";
+  font-family: "Gotham-Book";
   
 }
 

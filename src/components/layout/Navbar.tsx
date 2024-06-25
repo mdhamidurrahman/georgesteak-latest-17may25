@@ -1,66 +1,29 @@
-import { useEffect, useState } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React from 'react';
+import MobileNavbar from './MobileNavbar';
+import MediumScreenNavbar from './MediumScreenNavbar';
+import LargeScreenNavbar from './LargeScreenNavbar';
+import XLScreenNavbar from './XLScreenNavbar';
 
-gsap.registerPlugin(ScrollTrigger);
-
-const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  
-
-  useEffect(() => {
-    const toggleScrolled = () => {
-      setIsScrolled(window.scrollY > 80); 
-    };
-    window.addEventListener("scroll", toggleScrolled);
-    
-    return () => {
-      window.removeEventListener("scroll", toggleScrolled);
-    };
-  }, []);
-
-  const linksExpanded = [
-    "HOME",
-    "ABOUT",
-    "MENUS",
-    "PRIV DINING",
-    <img src="assets/image/navAnimatedImg.svg" alt="EVENTS" className="h-[153px] w-[206px]" />, 
-    "GALLERY",
-    "GIFT CARDS",
-    "CONTACT",
-  ];
-
-  const linksScrolled = [
-    "HOME",
-    "ABOUT",
-    "MENUS",
-    "PRIVATE DINING",
-    "EVENTS & SPECIALS",
-    "GALLERY",
-    "GIFT CARDS",
-    "CONTACT",
-  ];
-
-  const linksToShow = isScrolled ? linksScrolled : linksExpanded;
-
+const NavBar = () => {
   return (
     <>
-      <div className={`bg-[#400000] main-tool-bar z-50 flex items-center justify-center ${isScrolled ? 'main-tool-bar--scrolled' : 'border-b-2 border-[#ffd400]'}`}>
-        <div className="flex justify-center items-end gap-10">
-          {linksToShow.map((link, index) => (
-            <a key={index} href="#" className=
-            {`opacity-[0.7] hover:opacity-[1] text-[#ffd400] ${typeof link !== 'string' ? 'pb-1' : 'pb-[30px]'}  tracking-[1px] text-[12px]`}>
-              {typeof link === 'string' ? link : <>{link}</>} 
-            </a>
-          ))}
-          <div className="z-50 w-44 min-h-10 tracking-[1px] bg-[#e1b728] border-0 rounded text-center text-[13px] text-[#580000] leading-10 fixed top-[17px] right-8 book-table">
-            BOOK A TABLE
-          </div>
-        </div>
+      <div className="block sm:hidden">
+        <MobileNavbar />
       </div>
-      
+      <div className="hidden sm:block md:hidden">
+        <MediumScreenNavbar />
+      </div>
+      <div className="hidden md:block lg:hidden">
+        <LargeScreenNavbar />
+      </div>
+      <div className="hidden lg:block xl:hidden">
+        <XLScreenNavbar />
+      </div>
+      <div className="hidden xl:block">
+        <XLScreenNavbar />
+      </div>
     </>
   );
 };
 
-export default Navbar;
+export default NavBar;
