@@ -1,5 +1,3 @@
-import React from 'react';
-
 const DropDownItems = () => {
   const menuItems = [
     { name: "About", href: "#about" },
