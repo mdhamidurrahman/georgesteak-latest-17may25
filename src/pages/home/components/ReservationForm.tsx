@@ -27,7 +27,7 @@ export default function ReservationForm() {
       </div>
 
       <div className="bookTable">
-        <p>
+        <p className="">
           To book your table online at George Italian Seafood & Steakhouse at
           Greenwich CT, please enter the info and a manager will contact you
           soon. We have a 10 minute grace period. For more than 8 guests please

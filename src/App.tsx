@@ -8,7 +8,7 @@ import NavBar from './components/layout/Navbar';
 function App() {
   return (
     <main className='myMain'>
-     <NavBar/>
+     {/* <NavBar/> */}
       <SlickSlider/>
      <Routes>
      <Route path="/" element={<Home />} />

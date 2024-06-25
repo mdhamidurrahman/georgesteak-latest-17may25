@@ -25,7 +25,6 @@ export default function ContactUs() {
                             <a href="#">(203) 531-7050</a>
                         </div>
                         <div className="icon-box">
-
                             <div className="icon">
                                 <img src="assets\image\enveope-u322.png" />
                             </div>
