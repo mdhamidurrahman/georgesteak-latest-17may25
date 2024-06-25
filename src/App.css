@@ -90,16 +90,15 @@ body {
   z-index: 0;
 }
 
-.goerg-p p,
-.aboutUs h3,
-.bookTable p,
-.mailingList p {
+:is(.goerg-p, .aboutUs, .bookTable, .mailingList, .launch) p, h3{
   font-size: 13px;
   line-height: 23px;
   font-weight: 300;
+
 }
 
 .goerg-p p {
+  width: 90%;
   color: #000;
   margin-bottom: 20px;
 }
