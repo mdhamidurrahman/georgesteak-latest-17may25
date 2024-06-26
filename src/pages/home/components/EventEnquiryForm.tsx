@@ -83,7 +83,7 @@ const imageUrl="assets/image/contactus01.jpg"
           <button type="submit">SEND</button>
         </form>
       
-      <ScrollImage imageUrl={imageUrl} height={700}/>
+      <ScrollImage imageUrl={imageUrl}/>
     </section>
   );
 }

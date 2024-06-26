@@ -1,7 +1,7 @@
 import ScrollImage from "./ScrollImage";
 
 export default function Spevents() {
-const imageUrl="assets/image/pgiftcards.jpg"
+    const imageUrl = "assets/image/pgiftcards.jpg"
     return (
         <section className='spevent reservation'>
 
@@ -45,8 +45,8 @@ const imageUrl="assets/image/pgiftcards.jpg"
                 </div>
                 <a href="#">JOIN OUR MAILING LIST</a>
             </div>
-            <ScrollImage imageUrl={imageUrl} height={700}/>
-            
+            <ScrollImage imageUrl={imageUrl} />
+
         </section>
     )
 }

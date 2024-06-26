@@ -4,7 +4,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ScrollImage = ({ imageUrl, height }:{imageUrl:string,height:number}) => {
+const ScrollImage = ({ imageUrl }: { imageUrl: string }) => {
   const imgRef = useRef(null);
 
   useEffect(() => {
@@ -18,17 +18,17 @@ const ScrollImage = ({ imageUrl, height }:{imageUrl:string,height:number}) => {
         ease: 'none',
         scrollTrigger: {
           trigger: image,
-          start: 'top bottom', 
-          end: 'bottom top', 
-          scrub: true 
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: true
         }
       }
     );
-  }, [imageUrl]); 
+  }, [imageUrl]);
 
   return (
-    <div style={{ height: `${height}px`, overflow: 'hidden' }}>
-      <img className='w-full'  ref={imgRef} src={imageUrl} alt="" />
+    <div style={{ height: 'auto', overflow: 'hidden' }}>
+      <img className='w-full' ref={imgRef} src={imageUrl} alt="" />
     </div>
   );
 };
