@@ -7,7 +7,7 @@ export default function ReservationForm() {
   const [date, setDate] = useState<Date | null>(new Date());
   const [time, setTime] = useState("");
   const [guests, setGuests] = useState(1);
-  const imageUrl="assets/image/pcuisine.jpg"
+  const imageUrl = "assets/image/pcuisine.jpg"
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -40,11 +40,11 @@ export default function ReservationForm() {
         <div className="formField nameEmail">
           <div>
             <label htmlFor="name">NAME</label>
-            <input id="name" type="text"  required />
+            <input id="name" type="text" required />
           </div>
           <div>
             <label htmlFor="email">EMAIL</label>
-            <input id="email" type="text"  required/>
+            <input id="email" type="text" required />
           </div>
         </div>
 
@@ -55,7 +55,7 @@ export default function ReservationForm() {
           </div>
           <div className="input-date">
             <label htmlFor="date">DATE</label>
-            <DatePicker selected={date}  onChange={(date: Date | null) => setDate(date)}  />
+            <DatePicker selected={date} onChange={(date: Date | null) => setDate(date)} />
           </div>
           <div>
             <label htmlFor="time">TIME</label>
@@ -87,7 +87,7 @@ export default function ReservationForm() {
         </div>
         <button type="submit">SEND</button>
       </form>
-      <ScrollImage imageUrl={imageUrl} height={700}/>
+      <ScrollImage imageUrl={imageUrl} />
     </section>
   );
 }

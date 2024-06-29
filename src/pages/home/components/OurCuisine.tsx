@@ -83,7 +83,7 @@ export default function OurCuisine() {
                 </div>
             </div>
             
-            <ScrollImage imageUrl={imageUrl} height={500}/>
+            <ScrollImage imageUrl={imageUrl}/>
         </section>
     )
 }

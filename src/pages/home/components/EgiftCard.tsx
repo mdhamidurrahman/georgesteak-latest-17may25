@@ -3,7 +3,7 @@ import ScrollImage from "./ScrollImage"
 export default function EgiftCard() {
     const imageUrl="assets/image/pparties.jpg"
     return (
-        <section className='bg-white'>
+        <section className='bg-white '>
 
             <div id="gift-cards" className="estd">
                 <div className="animal">
@@ -26,9 +26,9 @@ export default function EgiftCard() {
             <div className="egiftc p-10">
                 <p>If you do not receive an e-Gift Certificate from the Best Italian Restaurants
                     in Greenwich CT George Steakhouse within 24 hours, please check your spam folder or email us at
-                    <a href="#">giftcard@nycrestaurant.com</a> </p>
+                    <a href="#"> giftcard@nycrestaurant.com</a> </p>
             </div>
-        <ScrollImage imageUrl={imageUrl} height={700} />
+        <ScrollImage imageUrl={imageUrl} />
         </section>
     )
 }

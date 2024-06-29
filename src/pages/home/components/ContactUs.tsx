@@ -1,14 +1,14 @@
 
 export default function ContactUs() {
     return (
-        <section className='bg-white py-10'>
+        <section className='contcat_Us bg-white py-10'>
             <div id="contact" className="estd">
                 <div className="animal">
                     <h2>CONTACT US</h2>
                 </div>
             </div>
 
-            <div className="container">
+            
                 <div className="box-icon">
                     <div className="icon_boxx">
                         <div className="icon-box">
@@ -60,7 +60,6 @@ export default function ContactUs() {
                         <a href="#">SEND</a>
                     </div>
                 </form>
-            </div>
         </section>
     )
 }

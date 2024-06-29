@@ -49,7 +49,7 @@ export default function Pdining() {
                         </div>
                     </div>
                 </div>
-                {/* <a href="#">JOIN OUR MAILING LIST</a> */}
+              
             </div>
 
         </section>

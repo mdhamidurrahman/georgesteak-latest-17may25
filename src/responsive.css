@@ -16,9 +16,9 @@
         flex-direction: column;
     }
 
-    :is(.goerg-, .aboutUs, .bookTable, .mailingList) :is(p, h3) {
+    /* :is(.goerg-, .aboutUs, .mailingList) :is(p, h3) {
         font-size: 16px;
-    }
+    } */
 
     .launch article {
         width: 100%;
@@ -42,8 +42,11 @@
     }
 
     /* ======== OUR CUISINE ======= */
+    .reservation {
+        padding: 10px 0;
+    }
+
     .gallery,
-    .icon_boxx,
     .goerg-p p {
         width: 100%;
     }
@@ -56,6 +59,11 @@
     .eventSpecial {
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 2rem;
+    }
+
+    :is(.reservation, .eventEquity) form {
+        padding: 10px 20px 20px;
+        margin-top: 0;
     }
 
     :is(.eventSpecial) :is(.gallery-item, img) {
@@ -78,7 +86,10 @@
 
     .egiftc p {
         width: 78%;
-        font-size: 12px;
+    }
+
+    .contcat_Us {
+        padding: 0 0 80px !important;
     }
 
     /* ======= PRIVATE DINING ======= */
@@ -109,23 +120,48 @@
 
     .pdingin p,
     .bookTable p {
-        width: 100%;
+        width: 80%;
+    }
+
+    .eventSpecial {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    }
+
+    .center-box {
+        grid-column: 2 / 3;
     }
 }
 
 @media only screen and (max-width:767px) {
 
+    .gallery,
+    .icon_boxx {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        width: 100%;
+    }
+
+    .aboutUs {
+        padding: 0 20px 50px 20px;
+    }
+
+    .nameEmail,
+    .sentdata {
+        flex-direction: column;
+        place-items: center;
+    }
+
     .reservFrom input,
     .eventEquity form input,
-    .pdingin p,
+    .sentdata,
     .icon_boxx>.icon-box a,
-    .launch article div, .estd p {
+    .launch article div,
+    .input-date .react-datepicker__input-container input,
+    .userInfo a {
         width: 100% !important;
     }
-    
 
-    .center-box {
-        grid-column: 2 / 3;
+    :is(.estd, .pdingin, .bookTable, .egiftc, .mailingList) p {
+        width: 90%;
     }
 }
 
