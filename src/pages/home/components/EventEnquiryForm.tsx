@@ -1,89 +1,50 @@
-import { useState } from "react";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+import { useEffect, useRef, useState } from "react";
 import ScrollImage from "./ScrollImage";
+
 export default function EventEnquiryForm() {
-  const [date, setDate] = useState<Date | null>(new Date());
-  const [time, setTime] = useState("");
-  const [guests, setGuests] = useState(1);
-const imageUrl="assets/image/contactus01.jpg"
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-    console.log("Date:", date);
-    console.log("Time:", time);
-    console.log("Number of Guests:", guests);
-    setTime("");
-    setGuests(1);
-  };
+  const widgetRef = useRef<HTMLDivElement | null>(null);
+  const [isScriptLoaded, setIsScriptLoaded] = useState(false);
+
+  useEffect(() => {
+    if (!isScriptLoaded && widgetRef.current) {
+      const script = document.createElement("script");
+
+      script.src =
+        "//www.opentable.com/widget/reservation/loader?rid=1250434&type=standard&theme=standard&color=1&dark=false&iframe=true&domain=com&lang=en-US&newtab=false&ot_source=Restaurant%20website&cfe=true";
+      script.async = true;
+
+      script.onload = () => {
+        setIsScriptLoaded(true);
+      };
+
+      widgetRef.current.appendChild(script);
+
+      return () => {
+        if (widgetRef.current) {
+          widgetRef.current.removeChild(script);
+        }
+      };
+    }
+  }, [isScriptLoaded]);
+
   return (
     <section className="eventEquity">
-      <div id="event-inquiry" className="estd eventInqury">
-        <div className="animal ">
+      {/* <div
+        id="event-inquiry"
+        className="estd eventInqury flex justify-center items-center flex-col"
+      >
+         <div className="animal">
           <h2>EVENT INQUIRY</h2>
         </div>
         <p>
           To book your private event at George Italian Restaurants in Greenwich,
           CT please enter your info & someone will contact you shortly
         </p>
+       </div> */}
+      <div className="w-full flex justify-center items-center">
+        <div ref={widgetRef}></div>
       </div>
-
-      
-        <form onSubmit={handleSubmit} className="text-white pb-16">
-          <div className="formField nameEmail">
-            <div>
-              <label>NAME</label>
-              <input type="text" />
-            </div>
-            <div>
-              <label>EMAIL</label>
-              <input type="text" />
-            </div>
-          </div>
-
-          <div className="formField pdtfield">
-            <div>
-              <label>PHONE</label>
-              <input type="phone" />
-            </div>
-            <div>
-              <label htmlFor="date">DATE</label>
-              <DatePicker
-                selected={date}
-                onChange={(date: Date | null) => setDate(date)}
-              />
-            </div>
-            <div>
-              <label htmlFor="time">TIME</label>
-              <input
-                type="time"
-                id="time"
-                value={time}
-                onChange={(e) => setTime(e.target.value)}
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="guests">GUESTS</label>
-              <input
-                type="number"
-                id="guests"
-                value={guests}
-                onChange={(e: any) => setGuests(e.target.value)}
-                min="1"
-                required
-              />
-            </div>
-          </div>
-          <div className="spReuest">
-            <div>
-              <label>TYPE OF EVENT</label>
-              <input type="request" />
-            </div>
-          </div>
-          <button type="submit">SEND</button>
-        </form>
-      
-      <ScrollImage imageUrl={imageUrl}/>
+      <ScrollImage imageUrl="assets/image/contactus01.jpg" />
     </section>
   );
 }
