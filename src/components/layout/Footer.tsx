@@ -22,7 +22,10 @@ const Footer = () => {
       >
         <div className="flex justify-end gap-10 w-[80%]">
           {data.map((link, index) => (
-            <div key={index} className="flex opacity-[0.7] hover:opacity-[1] justify-center text-center items-center gap-2">
+            <div
+              key={index}
+              className="flex opacity-[0.7] hover:opacity-[1] justify-center text-center items-center gap-2"
+            >
               <img className="h-3 w-3" src={link.image} alt="icon" />
               <a
                 href="#"

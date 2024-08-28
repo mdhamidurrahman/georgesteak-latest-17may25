@@ -21,6 +21,7 @@ export default function EventEnquiryForm() {
 
       return () => {
         if (widgetRef.current) {
+          // eslint-disable-next-line react-hooks/exhaustive-deps
           widgetRef.current.removeChild(script);
         }
       };

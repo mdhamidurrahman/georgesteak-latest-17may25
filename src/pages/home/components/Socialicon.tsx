@@ -1,9 +1,21 @@
+import { Link } from "react-router-dom";
+
 export default function Socialicon() {
   return (
     <section className="social-icons py-20">
       <div className="social_icon">
-        <i className="fa fa-facebook" aria-hidden="true"></i>
-        <i className="fa fa-instagram" aria-hidden="true"></i>
+        <Link
+          className="cursor-pointer"
+          to={"https://www.facebook.com/GeorgeItalianSteakhouse/"}
+        >
+          <i className="fa fa-facebook" aria-hidden="true"></i>
+        </Link>{" "}
+        <Link
+          className="cursor-pointer"
+          to={"https://www.instagram.com/georgesteakhouse/?hl=en"}
+        >
+          <i className="fa fa-instagram" aria-hidden="true"></i>
+        </Link>
       </div>
       {/* <div className="contetn">
                 <a href="#">ADA COMPLIANCE STATEMENT</a>
