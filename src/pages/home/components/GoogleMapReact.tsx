@@ -1,15 +1,15 @@
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+// import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 
 export default function GoogleMapReact() {
-  const containerStyle = {
-    width: "100%",
-    height: "600px",
-  };
+  //   const containerStyle = {
+  //     width: "100%",
+  //     height: "600px",
+  //   };
 
-  const center = {
-    lat: -3.745,
-    lng: -38.523,
-  };
+  //   const center = {
+  //     lat: -3.745,
+  //     lng: -38.523,
+  //   };
 
   return (
     <section className="gMap">
