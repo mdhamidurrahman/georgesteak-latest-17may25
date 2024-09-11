@@ -10,7 +10,16 @@ export default function OurMenue() {
   const firstImageRef = useRef(null);
   const secondImageRef = useRef(null);
   const imageRef = useRef(null);
-const imageUrl="assets/image/preservations.jpg"
+  const imageUrl = "assets/image/preservations.jpg";
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    console.log(window.location.host);
+    link.href = `https://${window.location.host}/assets/party-menu.pdf`; // Path to your PDF file
+    link.setAttribute("download", "party-menu.pdf"); // Name of the downloaded file
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   useEffect(() => {
     gsap.to(imageRef.current, {
       motionPath: {
@@ -18,10 +27,10 @@ const imageUrl="assets/image/preservations.jpg"
           { x: 0, y: 0 },
           { x: -300, y: 550 },
         ],
-        curviness: 0.25, 
+        curviness: 0.25,
         autoRotate: false,
       },
-      duration: 20, 
+      duration: 20,
       scrollTrigger: {
         trigger: imageRef.current,
         start: "top bottom",
@@ -116,7 +125,12 @@ const imageUrl="assets/image/preservations.jpg"
             </div>
           </div>
         </div>
-        <a className="relative z-0" href="#">PARTY PACKAGES</a>
+        <div
+          onClick={handleDownload}
+          className="relative z-0 bg-[#400] text-[#fff] px-6 py-3 cursor-pointer"
+        >
+          PARTY PACKAGES
+        </div>
       </div>
       <div className="w-full flex justify-between relative">
         <div>
@@ -141,4 +155,3 @@ const imageUrl="assets/image/preservations.jpg"
     </div>
   );
 }
-
