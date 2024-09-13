@@ -4,13 +4,39 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import ScrollImage from "./ScrollImage";
 
+// const menuList = [
+//   {
+//     title: "LUNCH PRIX-FIXED",
+//     bgImage: "assets/image/menus01.jpg",
+//   },
+//   {
+//     title: "LUNCH & DINNER",
+//     bgImage: "assets/image/menus05.jpg",
+//   },
+//   {
+//     title: "SUNDAY BRUNCH",
+//     bgImage: "assets/image/menus04.jpg",
+//   },
+//   {
+//     title: "BAR MENU",
+//     bgImage: "assets/image/menusbarmenu.jpg",
+//   },
+//   {
+//     title: "cocktails",
+//     bgImage: "assets/image/menusdrinks01.jpg",
+//   },
+//   {
+//     title: "DESSERTS",
+//     bgImage: "assets/image/menus03.jpg",
+//   },
+// ];
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
 export default function OurMenue() {
   const firstImageRef = useRef(null);
   const secondImageRef = useRef(null);
   const imageRef = useRef(null);
-const imageUrl="assets/image/preservations.jpg"
+  const imageUrl = "assets/image/preservations.jpg";
   useEffect(() => {
     gsap.to(imageRef.current, {
       motionPath: {
@@ -18,10 +44,10 @@ const imageUrl="assets/image/preservations.jpg"
           { x: 0, y: 0 },
           { x: -300, y: 550 },
         ],
-        curviness: 0.25, 
+        curviness: 0.25,
         autoRotate: false,
       },
-      duration: 20, 
+      duration: 20,
       scrollTrigger: {
         trigger: imageRef.current,
         start: "top bottom",
@@ -65,7 +91,7 @@ const imageUrl="assets/image/preservations.jpg"
           <img
             ref={imageRef}
             className="absolute flex z-[999] h-40 top-[-20px] w-52"
-            src="https://georgesteakhouse.com/images/artchef.svg?crc=6725776"
+            src="assets/image/barlounge.jpg"
             alt=""
           />
         </div>
@@ -76,55 +102,68 @@ const imageUrl="assets/image/preservations.jpg"
           <h2>OUR MENUS</h2>
         </div>
       </div>
+
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-4">
+        {menuList.map((item, index) => (
+          <div key={index} className="relative grid place-items-end">
+            <img src={item.bgImage} alt="Gallery" className="object-cover" />
+            <div className="absolute w-full text-center text-white pb-10">
+              <h3 className="">{item.title} </h3>
+            </div>
+          </div>
+        ))}
+      </div> */}
+
       <div className="galery">
         <div className="gallery">
           <div className="gallery-item">
-            <img src="assets\\image\\menus01.jpg" alt="" />
+            <img src="assets/image/menus01.jpg" />
             <div className="gallery-item-overlay">
               <h3>LUNCH PRIX-FIXED</h3>
             </div>
           </div>
           <div className="gallery-item">
-            <img src="assets\\image\\menus05.jpg" alt="" />
+            <img src="assets/image/menus05.jpg" />
             <div className="gallery-item-overlay">
               <h3>LUNCH & DINNER</h3>
             </div>
           </div>
           <div className="gallery-item">
-            <img src="assets\\image\\menus04.jpg" alt="" />
+            <img src="assets/image/menus04.jpg" />
             <div className="gallery-item-overlay">
               <h3>SUNDAY BRUNCH</h3>
             </div>
           </div>
 
           <div className="gallery-item">
-            <img src="assets\\image\\menusbarmenu.jpg" alt="" />
+            <img src="assets/image/menusbarmenu.jpg" />
             <div className="gallery-item-overlay">
               <h3>BAR MENU</h3>
             </div>
           </div>
           <div className="gallery-item">
-            <img src="assets\\image\\menusdrinks01.jpg" alt="" />
+            <img src="assets/image/menusdrinks01.jpg" />
             <div className="gallery-item-overlay">
               <h3>cocktails</h3>
             </div>
           </div>
           <div className="gallery-item">
-            <img src="assets\\image\\menus03.jpg" alt="" />
+            <img src="assets/image/menus03.jpg" />
             <div className="gallery-item-overlay">
               <h3>DESSERTS</h3>
             </div>
           </div>
         </div>
-        <a className="relative z-0" href="#">PARTY PACKAGES</a>
+        <a className="relative z-0" href="#">
+          PARTY PACKAGES
+        </a>
       </div>
       <div className="w-full flex justify-between relative">
         <div>
           <img
             ref={firstImageRef}
             className="flex absolute bottom-5 z-50 h-40  w-52"
-            src="https://georgesteakhouse.com/images/artlobster.svg?crc=3776414"
-            alt=""
+            src="assets/image/giftcard-u.png"
           />
         </div>
 
@@ -132,8 +171,7 @@ const imageUrl="assets/image/preservations.jpg"
           <img
             ref={secondImageRef}
             className="h-20 w-40"
-            src="https://georgesteakhouse.com/images/artfish.svg?crc=257803479"
-            alt=""
+            src="assets/image/menus03.jpg"
           />
         </div>
       </div>
@@ -141,4 +179,3 @@ const imageUrl="assets/image/preservations.jpg"
     </div>
   );
 }
-

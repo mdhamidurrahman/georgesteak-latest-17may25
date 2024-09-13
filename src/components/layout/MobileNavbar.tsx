@@ -14,8 +14,8 @@ const MobileNavbar = () => {
       className={`bg-[#400000] px-2 main-tool-bar-mobile z-50 flex items-center justify-between border-b-2 border-[#ffd400]`}
     >
       <img
-        className="h-[65px] w-[235px]"
-        src="https://georgesteakhouse.com/images/logo_mobile.svg?crc=250689993"
+        className="h-[50px] w-[50px] rounded-full"
+        src="assets/image/giftcard-u.png"
         alt="image"
       />
       {isDropdownOpen ? (
@@ -36,8 +36,8 @@ const MobileNavbar = () => {
         </svg>
       ) : (
         <img
-          className="h-[28px] w-[94px] cursor-pointer"
-          src="https://georgesteakhouse.com/images/burger_2x.png?crc=450879476"
+          className="h-[30px] w-[30px] rounded-full cursor-pointer"
+          src="assets/image/barlounge.jpg"
           alt="image"
           onClick={toggleDropdown}
         />

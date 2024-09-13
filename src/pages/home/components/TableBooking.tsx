@@ -23,12 +23,12 @@ const TableBooking = () => {
       <div className="flex md:hidden gap-4 mt-10 pb-[100px] justify-center items-center">
         <img
             className="h-[20px] w-[25px]"
-            src="https://georgesteakhouse.com/images/facebook2.svg?crc=159406103"
+            src="assets/image/barlounge.jpg"
             alt="ff"
           />
           <img
             className="h-[20px] w-[25px]"
-            src="https://georgesteakhouse.com/images/instagram2.svg?crc=3925054431"
+            src="assets/image/bianca.jpg"
             alt="thd"
           />
         </div>
@@ -53,8 +53,8 @@ const TableBooking = () => {
       </div>
       <div className="flex md:block justify-center sm:hidden lg:py-[300px] xl:py-[400px] py-9 items-center text-center">
         <img
-          className=" h-[60px] w-[70px] "
-          src="https://georgesteakhouse.com/images/adacompliancelogo_2x69x57.png?crc=3880310862"
+          className=" h-[100px] w-[100px] "
+          src="assets/image/estd.svg"
           alt="img"
         />
       </div>
