@@ -4,32 +4,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import ScrollImage from "./ScrollImage";
 
-// const menuList = [
-//   {
-//     title: "LUNCH PRIX-FIXED",
-//     bgImage: "assets/image/menus01.jpg",
-//   },
-//   {
-//     title: "LUNCH & DINNER",
-//     bgImage: "assets/image/menus05.jpg",
-//   },
-//   {
-//     title: "SUNDAY BRUNCH",
-//     bgImage: "assets/image/menus04.jpg",
-//   },
-//   {
-//     title: "BAR MENU",
-//     bgImage: "assets/image/menusbarmenu.jpg",
-//   },
-//   {
-//     title: "cocktails",
-//     bgImage: "assets/image/menusdrinks01.jpg",
-//   },
-//   {
-//     title: "DESSERTS",
-//     bgImage: "assets/image/menus03.jpg",
-//   },
-// ];
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
 export default function OurMenue() {
@@ -87,14 +61,14 @@ export default function OurMenue() {
   return (
     <div id="menus" className="bg-white menuMain">
       <div className="relative">
-        <div className="w-full flex justify-end">
+        {/* <div className="w-full flex justify-end">
           <img
             ref={imageRef}
             className="absolute flex z-[999] h-40 top-[-20px] w-52"
             src="assets/image/barlounge.jpg"
             alt=""
           />
-        </div>
+        </div> */}
       </div>
 
       <div className="estd">
@@ -102,17 +76,6 @@ export default function OurMenue() {
           <h2>OUR MENUS</h2>
         </div>
       </div>
-
-      {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-4">
-        {menuList.map((item, index) => (
-          <div key={index} className="relative grid place-items-end">
-            <img src={item.bgImage} alt="Gallery" className="object-cover" />
-            <div className="absolute w-full text-center text-white pb-10">
-              <h3 className="">{item.title} </h3>
-            </div>
-          </div>
-        ))}
-      </div> */}
 
       <div className="galery">
         <div className="gallery">
@@ -154,11 +117,11 @@ export default function OurMenue() {
             </div>
           </div>
         </div>
-        <a className="relative z-0" href="#">
+        <a className="relative z-0 pb-4" href="#">
           PARTY PACKAGES
         </a>
       </div>
-      <div className="w-full flex justify-between relative">
+      {/* <div className="w-full flex justify-between relative">
         <div>
           <img
             ref={firstImageRef}
@@ -174,7 +137,7 @@ export default function OurMenue() {
             src="assets/image/menus03.jpg"
           />
         </div>
-      </div>
+      </div> */}
       <ScrollImage imageUrl={imageUrl} />
     </div>
   );

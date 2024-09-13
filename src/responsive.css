@@ -164,3 +164,13 @@
         width: 90%;
     }
 }
+
+
+@media only screen and (max-width:425px) {
+    .animal {
+        width: 100% !important;
+    }
+    .center-box {
+        grid-column: 1 / 2;
+    }
+}

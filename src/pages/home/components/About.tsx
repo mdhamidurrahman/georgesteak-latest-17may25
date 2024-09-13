@@ -6,7 +6,7 @@ export default function About() {
   const imageUrl1 = "assets/image/pmenus.jpg";
   return (
     <section>
-      <ScrollImage imageUrl={imageUrl} height={700} />
+      <ScrollImage imageUrl={imageUrl} />
 
       <div id="about" className="aboutUs">
         <div className=" about-us ">
@@ -65,7 +65,7 @@ export default function About() {
           <div className="w-1/2 artcontent" ></div>
         </div>
       </div>
-      <ScrollImage imageUrl={imageUrl1} height={700} />
+      <ScrollImage imageUrl={imageUrl1} />
     </section>
   );
 }
