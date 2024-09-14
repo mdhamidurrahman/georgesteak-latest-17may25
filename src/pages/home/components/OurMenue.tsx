@@ -11,15 +11,6 @@ export default function OurMenue() {
   const secondImageRef = useRef(null);
   const imageRef = useRef(null);
   const imageUrl = "assets/image/preservations.jpg";
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    console.log(window.location.host);
-    link.href = `https://${window.location.host}/assets/party-menu.pdf`; // Path to your PDF file
-    link.setAttribute("download", "party-menu.pdf"); // Name of the downloaded file
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
   useEffect(() => {
     gsap.to(imageRef.current, {
       motionPath: {
@@ -70,14 +61,14 @@ export default function OurMenue() {
   return (
     <div id="menus" className="bg-white menuMain">
       <div className="relative">
-        <div className="w-full flex justify-end">
+        {/* <div className="w-full flex justify-end">
           <img
             ref={imageRef}
             className="absolute flex z-[999] h-40 top-[-20px] w-52"
-            src="https://georgesteakhouse.com/images/artchef.svg?crc=6725776"
+            src="assets/image/barlounge.jpg"
             alt=""
           />
-        </div>
+        </div> */}
       </div>
 
       <div className="estd">
@@ -85,60 +76,57 @@ export default function OurMenue() {
           <h2>OUR MENUS</h2>
         </div>
       </div>
+
       <div className="galery">
         <div className="gallery">
           <div className="gallery-item">
-            <img src="assets\\image\\menus01.jpg" alt="" />
+            <img src="assets/image/menus01.jpg" />
             <div className="gallery-item-overlay">
               <h3>LUNCH PRIX-FIXED</h3>
             </div>
           </div>
           <div className="gallery-item">
-            <img src="assets\\image\\menus05.jpg" alt="" />
+            <img src="assets/image/menus05.jpg" />
             <div className="gallery-item-overlay">
               <h3>LUNCH & DINNER</h3>
             </div>
           </div>
           <div className="gallery-item">
-            <img src="assets\\image\\menus04.jpg" alt="" />
+            <img src="assets/image/menus04.jpg" />
             <div className="gallery-item-overlay">
               <h3>SUNDAY BRUNCH</h3>
             </div>
           </div>
 
           <div className="gallery-item">
-            <img src="assets\\image\\menusbarmenu.jpg" alt="" />
+            <img src="assets/image/menusbarmenu.jpg" />
             <div className="gallery-item-overlay">
               <h3>BAR MENU</h3>
             </div>
           </div>
           <div className="gallery-item">
-            <img src="assets\\image\\menusdrinks01.jpg" alt="" />
+            <img src="assets/image/menusdrinks01.jpg" />
             <div className="gallery-item-overlay">
               <h3>cocktails</h3>
             </div>
           </div>
           <div className="gallery-item">
-            <img src="assets\\image\\menus03.jpg" alt="" />
+            <img src="assets/image/menus03.jpg" />
             <div className="gallery-item-overlay">
               <h3>DESSERTS</h3>
             </div>
           </div>
         </div>
-        <div
-          onClick={handleDownload}
-          className="relative z-0 bg-[#400] text-[#fff] px-6 py-3 cursor-pointer"
-        >
+        <a className="relative z-0 mb-10" href="#">
           PARTY PACKAGES
-        </div>
+        </a>
       </div>
-      <div className="w-full flex justify-between relative">
+      {/* <div className="w-full flex justify-between relative">
         <div>
           <img
             ref={firstImageRef}
             className="flex absolute bottom-5 z-50 h-40  w-52"
-            src="https://georgesteakhouse.com/images/artlobster.svg?crc=3776414"
-            alt=""
+            src="assets/image/giftcard-u.png"
           />
         </div>
 
@@ -146,11 +134,10 @@ export default function OurMenue() {
           <img
             ref={secondImageRef}
             className="h-20 w-40"
-            src="https://georgesteakhouse.com/images/artfish.svg?crc=257803479"
-            alt=""
+            src="assets/image/menus03.jpg"
           />
         </div>
-      </div>
+      </div> */}
       <ScrollImage imageUrl={imageUrl} />
     </div>
   );
