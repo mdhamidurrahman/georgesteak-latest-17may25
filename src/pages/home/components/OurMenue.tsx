@@ -117,7 +117,7 @@ export default function OurMenue() {
             </div>
           </div>
         </div>
-        <a className="relative z-0 pb-4" href="#">
+        <a className="relative z-0 mb-10" href="#">
           PARTY PACKAGES
         </a>
       </div>

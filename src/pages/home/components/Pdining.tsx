@@ -1,13 +1,43 @@
+import { useState } from "react";
+import PartyMenuModel from "../../../Share/PartyMenuModel";
+
+const galleryItems = [
+  {
+    title: "MAIN DINING ROOM",
+    imageSrc: "assets/image/main.jpg",
+    capacity: "Seated Capacity 100-120 Guests",
+    link: "#",
+  },
+  {
+    title: "TUSCANY ROOM",
+    imageSrc: "assets/image/tuscany.jpg",
+    capacity: "Seated Capacity 35-45 Guests",
+    link: "#",
+  },
+  {
+    title: "THE BAR & LOUNGE",
+    imageSrc: "assets/image/barlounge.jpg",
+    capacity: "Seated Capacity 30-40 Guests",
+    link: "#",
+  },
+  {
+    title: "GEORGE ROOM",
+    imageSrc: "assets/image/bianca.jpg",
+    capacity: "Seated Capacity 100-150 Guests",
+    link: "#",
+  },
+];
+
 export default function Pdining() {
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    console.log(window.location.host);
-    link.href = `https://${window.location.host}/assets/party-menu.pdf`; // Path to your PDF file
-    link.setAttribute("download", "party-menu.pdf"); // Name of the downloaded file
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
   };
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <section className="bg-white priDining">
       <div id="private-dining" className="estd">
@@ -22,15 +52,32 @@ export default function Pdining() {
           or a CORPORATE EVENTS, we'll customized your needs to make an
           unforgettable experience.
         </p>
-        <div
-          onClick={handleDownload}
-          className="relative z-0 bg-[#400] text-[#fff] px-6 py-3 cursor-pointer"
-        >
+        <button className="bg-[#400] text-[#fff] px-6 py-3" onClick={openModal}>
           PARTY MENUS
+        </button>
+        {isModalOpen && (
+          <div className="relative z-50">
+            <PartyMenuModel onClose={closeModal} isOpen={isModalOpen} />
+          </div>
+        )}
+      </div>
+      <div className="galery pDining">
+        <div className="gallery eventSpecial">
+          {galleryItems.map((item, index) => (
+            <div className="gallery-item" key={index}>
+              <div className={index % 2 === 0 ? "prix" : "hour"}>
+                <h2>{item.title}</h2>
+                <img src={item.imageSrc} alt={item.title} />
+                <p>
+                  {item.capacity} | <a href={item.link}>BOOK</a>
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
-      <div className="galery pDining">
+      {/* <div className="galery pDining">
         <div className="gallery eventSpecial">
           <div className="gallery-item">
             <div className="prix">
@@ -69,7 +116,7 @@ export default function Pdining() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

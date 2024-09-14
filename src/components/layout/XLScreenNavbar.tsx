@@ -24,9 +24,9 @@ const XLScreenNavbar = () => {
     { name: "ABOUT", href: "#about" },
     { name: "MENUS", href: "#menus" },
     { name: "PRIVATE DINING", href: "#private-dining" },
-    // { name: <img src="assets/image/navAnimatedImg.svg" alt="EVENTS" className="h-[153px] w-[206px]" />, href: "#events-specials" },
+    { name: <img src="assets/image/navAnimatedImg.svg" alt="EVENTS" className="h-[153px] w-[206px]" />, href: "#events-specials" },
     { name: "GALLERY", href: "#gallery" },
-    { name: "GIFT CARDS", href: "#gift-cards" },
+    // { name: "GIFT CARDS", href: "#gift-cards" },
     { name: "CONTACT", href: "#contact" },
   ];
 

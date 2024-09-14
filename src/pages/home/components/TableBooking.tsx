@@ -67,7 +67,7 @@ const TableBooking = () => {
       </Link>
       <div className="flex md:block justify-center sm:hidden lg:py-[300px] xl:py-[400px] py-9 items-center text-center">
         <img
-          className=" h-[100px] w-[100px] "
+          className=" h-[400px] w-[400px]"
           src="assets/image/estd.svg"
           alt="img"
         />
