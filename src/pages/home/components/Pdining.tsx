@@ -6,25 +6,25 @@ const galleryItems = [
     title: "MAIN DINING ROOM",
     imageSrc: "assets/image/main.jpg",
     capacity: "Seated Capacity 100-120 Guests",
-    link: "#",
+    link: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
   },
   {
     title: "TUSCANY ROOM",
     imageSrc: "assets/image/tuscany.jpg",
     capacity: "Seated Capacity 35-45 Guests",
-    link: "#",
+    link: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
   },
   {
     title: "THE BAR & LOUNGE",
     imageSrc: "assets/image/barlounge.jpg",
     capacity: "Seated Capacity 30-40 Guests",
-    link: "#",
+    link: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
   },
   {
     title: "GEORGE ROOM",
     imageSrc: "assets/image/bianca.jpg",
     capacity: "Seated Capacity 100-150 Guests",
-    link: "#",
+    link: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
   },
 ];
 
@@ -36,6 +36,10 @@ export default function Pdining() {
   };
   const closeModal = () => {
     setIsModalOpen(false);
+  };
+
+  const handleRedirect = (url: any) => {
+    window.location.href = url;
   };
 
   return (
@@ -67,7 +71,12 @@ export default function Pdining() {
             <div className="gallery-item" key={index}>
               <div className={index % 2 === 0 ? "prix" : "hour"}>
                 <h2>{item.title}</h2>
-                <img src={item.imageSrc} alt={item.title} />
+                <img
+                  src={item.imageSrc}
+                  alt={item.title}
+                  className="cursor-pointer"
+                  onClick={() => handleRedirect(item.link)}
+                />
                 <p>
                   {item.capacity} | <a href={item.link}>BOOK</a>
                 </p>

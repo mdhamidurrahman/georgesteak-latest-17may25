@@ -11,7 +11,7 @@ const GalleryModel: React.FC<ModalProps> = ({ isOpen, imageSrc, onClose }) => {
 
   return (
     <div
-      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-10"
+      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50"
       onClick={onClose}
     >
       <div className="relative w-[90%] max-w-[800px] h-auto" onClick={(e) => e.stopPropagation()}>
