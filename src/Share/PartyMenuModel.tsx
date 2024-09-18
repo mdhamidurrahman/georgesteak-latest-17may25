@@ -228,7 +228,6 @@ const PartyMenuModel = ({ isOpen, onClose }: Props) => {
                       {index === 1 || index === 2 || index === 3 ? (
                         <div className="pb-6">
                           <h2 className="text-2xl sm:text-3xl font-bold">
-                            {" "}
                             {item.pasta}
                           </h2>
                           <div className="text-lg sm:text-xl">{item.penne}</div>
