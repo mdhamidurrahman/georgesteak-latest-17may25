@@ -190,11 +190,17 @@ const PartyMenuModel = ({ isOpen, onClose }: Props) => {
                     {/* ========== Party Menu 4 -> DESSERTS & COFFEE ======== */}
                     <div className="absolute top-56">
                       <h2 className="text-2xl sm:text-3xl font-bold">
-                        {item.desserts}{" "}
+                        {item.desserts}
                       </h2>
                       <span>{item.person}</span>
                     </div>
-                    <div className="border-t border-b border-[#400] w-1/3 py-2">
+                    <div
+                      className={
+                        index === 3
+                          ? "mt-10 border-t border-b border-[#400] w-1/3 py-2"
+                          : "border-t border-b border-[#400] w-1/3 py-2"
+                      }
+                    >
                       {item?.title}
                     </div>
                     <div>
