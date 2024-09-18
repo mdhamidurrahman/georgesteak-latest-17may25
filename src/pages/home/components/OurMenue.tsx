@@ -1,8 +1,42 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import ScrollImage from "./ScrollImage";
+import PartyMenuModel from "../../../Share/PartyMenuModel";
+
+const galleryItems = [
+  {
+    image: "assets/image/menus01.jpg",
+    title: "LUNCH PRIX-FIXED",
+    url: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
+  },
+  {
+    image: "assets/image/menus05.jpg",
+    title: "LUNCH & DINNER",
+    url: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
+  },
+  {
+    image: "assets/image/menus04.jpg",
+    title: "SUNDAY BRUNCH",
+    url: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
+  },
+  {
+    image: "assets/image/menusbarmenu.jpg",
+    title: "BAR MENU",
+    url: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
+  },
+  {
+    image: "assets/image/menusdrinks01.jpg",
+    title: "COCKTAILS",
+    url: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
+  },
+  {
+    image: "assets/image/menus03.jpg",
+    title: "DESSERTS",
+    url: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
+  },
+];
 
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
@@ -10,6 +44,15 @@ export default function OurMenue() {
   const firstImageRef = useRef(null);
   const secondImageRef = useRef(null);
   const imageRef = useRef(null);
+  const [isOpenModel, setIsOpenModel] = useState(false);
+  const handleClick = () => {
+    setIsOpenModel(!isOpenModel);
+  };
+
+  const handleRedirect = (url: any) => {
+    window.location.href = url;
+  };
+
   const imageUrl = "assets/image/preservations.jpg";
   useEffect(() => {
     gsap.to(imageRef.current, {
@@ -79,48 +122,29 @@ export default function OurMenue() {
 
       <div className="galery">
         <div className="gallery">
-          <div className="gallery-item">
-            <img src="assets/image/menus01.jpg" />
-            <div className="gallery-item-overlay">
-              <h3>LUNCH PRIX-FIXED</h3>
+          {galleryItems.map((item, index) => (
+            <div className="gallery-item" key={index}>
+              <img src={item.image} alt={item.title} />
+              <div
+                className="gallery-item-overlay cursor-pointer"
+                onClick={() => handleRedirect(item.url)}
+              >
+                <h3>{item.title}</h3>
+              </div>
             </div>
-          </div>
-          <div className="gallery-item">
-            <img src="assets/image/menus05.jpg" />
-            <div className="gallery-item-overlay">
-              <h3>LUNCH & DINNER</h3>
-            </div>
-          </div>
-          <div className="gallery-item">
-            <img src="assets/image/menus04.jpg" />
-            <div className="gallery-item-overlay">
-              <h3>SUNDAY BRUNCH</h3>
-            </div>
-          </div>
-
-          <div className="gallery-item">
-            <img src="assets/image/menusbarmenu.jpg" />
-            <div className="gallery-item-overlay">
-              <h3>BAR MENU</h3>
-            </div>
-          </div>
-          <div className="gallery-item">
-            <img src="assets/image/menusdrinks01.jpg" />
-            <div className="gallery-item-overlay">
-              <h3>cocktails</h3>
-            </div>
-          </div>
-          <div className="gallery-item">
-            <img src="assets/image/menus03.jpg" />
-            <div className="gallery-item-overlay">
-              <h3>DESSERTS</h3>
-            </div>
-          </div>
+          ))}
         </div>
-        <a className="relative z-0 mb-10" href="#">
+        <a className="relative z-0 mb-10 cursor-pointer" onClick={handleClick}>
           PARTY PACKAGES
         </a>
+        {isOpenModel && (
+          <PartyMenuModel
+            onClose={() => setIsOpenModel(false)}
+            isOpen={isOpenModel}
+          />
+        )}
       </div>
+
       {/* <div className="w-full flex justify-between relative">
         <div>
           <img

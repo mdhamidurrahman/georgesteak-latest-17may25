@@ -37,7 +37,7 @@ const XLScreenNavbar = () => {
     { name: "PRIVATE DINING", href: "#private-dining" },
     { name: "EVENTS & SPECIALS", href: "#events-specials" },
     { name: "GALLERY", href: "#gallery" },
-    { name: "GIFT CARDS", href: "#gift-cards" },
+    // { name: "GIFT CARDS", href: "#gift-cards" },
     { name: "CONTACT", href: "#contact" },
   ];
 

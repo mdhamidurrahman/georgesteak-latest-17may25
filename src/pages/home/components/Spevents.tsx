@@ -1,6 +1,39 @@
 import ScrollImage from "./ScrollImage";
 
+const galleryItems = [
+  {
+    title: "PRIX-FIXED LUNCH",
+    bgImage: "assets/image/special_lunch.jpg",
+    time: "Mon - Sat 12pm - 4pm | $24.95 |",
+    menu: "MENU",
+    url: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
+  },
+  {
+    title: "HAPPY HOUR",
+    bgImage: "assets/image/special_happyhour01.jpg",
+    time: "Mon - Sat 3:30pm - 6:30pm 1/2 OFF Drinks |",
+    menu: "MENU",
+    url: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
+  },
+  {
+    title: "SUNDAY BRUNCH",
+    bgImage: "assets/image/special_express.jpg",
+    time: "Sundays 12pm - 4pm |",
+    menu: "MENU",
+    url: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
+  },
+  {
+    title: "WINE WEDNESDAYS",
+    bgImage: "assets/image/special_happyhour.jpg",
+    time: "Wines 50% OFF | Up to $100",
+    url: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
+  },
+];
 export default function Spevents() {
+  const handleRedirect = (url: any) => {
+    window.location.href = url;
+  };
+
   const imageUrl = "assets/image/pgiftcards.jpg";
   return (
     <section className="spevent reservation">
@@ -11,10 +44,30 @@ export default function Spevents() {
       </div>
       <div className="galery">
         <div className="gallery eventSpecial">
+          {galleryItems.map((item, index) => (
+            <div className="gallery-item" key={index}>
+              <div className="prix hour">
+                <h2>{item.title} </h2>
+                <img
+                  src={item.bgImage}
+                  className="cursor-pointer"
+                  onClick={() => handleRedirect(item.url)}
+                />
+                <p>
+                  {item.time} <a href={item.url}>{item.menu} </a>
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* <div className="galery">
+        <div className="gallery eventSpecial">
           <div className="gallery-item">
             <div className="prix">
               <h2>PRIX-FIXED LUNCH</h2>
-              <img src="assets\image\special_lunch.jpg" alt="" />
+              <img src="assets\image\special_lunch.jpg" />
               <p>
                 Mon - Sat 12pm - 4pm | $24.95 | <a href="#">MENU</a>
               </p>
@@ -46,8 +99,9 @@ export default function Spevents() {
             </div>
           </div>
         </div>
-        {/* <a href="#">JOIN OUR MAILING LIST</a> */}
-      </div>
+       
+      </div> */}
+
       <ScrollImage imageUrl={imageUrl} />
     </section>
   );
