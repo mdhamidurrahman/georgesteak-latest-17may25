@@ -61,9 +61,9 @@ const menuItems3 = [
       <div className="mt-[50px]">
         breadcrumbs, oregano, lemon white wine sauce
       </div>,
-      <p>GRILLED WILD SALMON</p>,
-      <p>NY STRIP STEAKS</p>,
-      <p>FILET MIGNON</p>,
+      <h4>GRILLED WILD SALMON</h4>,
+      <h4>NY STRIP STEAKS</h4>,
+      <h4>FILET MIGNON</h4>,
       "RIBEYE STEAK",
     ],
   },
@@ -119,7 +119,7 @@ const menuTitle = [
     familystyle: "family style",
     entrees: "ENTREES",
     choiceof: "choice of",
-    clams: <p style={{ paddingTop: "20px" }}>OSYTERS, CLAMS, SHRIMP </p>,
+    clams: <h4 style={{ paddingTop: "20px" }}>OSYTERS, CLAMS, SHRIMP </h4>,
     cocktail: <span>cocktail sauce</span>,
     AHI: "AHI TUNA TARTARE",
     heading: "GEORGE HOUSE SALAD",
@@ -217,7 +217,7 @@ const PartyMenuModel = ({ isOpen, onClose }: Props) => {
                       </div>
                     </div>
                     <div className="pt-4 sm:pt-8 grid gap-2">
-                      <p>{item.AHI} </p>
+                      <span>{item.AHI} </span>
                       <h4>{item.heading}</h4>
                       <span>{item.vigitable} </span>
                       <span> {item.table} </span>
@@ -272,7 +272,7 @@ const PartyMenuModel = ({ isOpen, onClose }: Props) => {
                         {item.Party_menues?.map((list, index) => (
                           <div key={index}>
                             <h2>{list.title} </h2>
-                            <p>{list.description}</p>
+                            <h3>{list.description}</h3>
                           </div>
                         ))}
                       </div>
