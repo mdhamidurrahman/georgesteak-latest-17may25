@@ -34,7 +34,7 @@ const menuItems2 = [
   },
   {
     title: (
-      <span style={{ fontWeight: "700", fontSize: "24px" }}>
+      <span className="font-bold text-lg sm:text-2xl">
         DESSERTS & COFFEE
       </span>
     ),
@@ -73,9 +73,9 @@ const menuItems4 = [
   {
     title: "This party menu its",
     description: [
-      <div className="flex place-items-baseline gap-1">
-        <h2 className="text-lg font-bold">3 hours</h2> food and{" "}
-        <h2 className="text-lg font-bold">Wine Bear & sods</h2>
+      <div className="flex place-items-baseline gap-1 text-[12px] sm:text-lg">
+        <h2 className="font-bold">3 hours</h2> food and{" "}
+        <h2 className="font-bold">Wine Bear & sods</h2>
       </div>,
     ],
   },
@@ -138,7 +138,7 @@ const menuTitle = [
     title: <div className="py-4"></div>,
     appetizers: <h2 className="py-12">BUFFET STYLE</h2>,
     clams: (
-      <h1 className="text-2xl font-bold pt-8">*Tray –Mozzarella Caprese</h1>
+      <h1 className="text-lg sm:text-2xl font-bold pt-8">*Tray –Mozzarella Caprese</h1>
     ),
     cocktail: (
       <span>
@@ -146,13 +146,13 @@ const menuTitle = [
         drizzle
       </span>
     ),
-    AHI: <h2 className="text-2xl font-bold">*Tray – Eggplant Rollatini</h2>,
+    AHI: <h2 className="text-lg sm:text-2xl font-bold">*Tray – Eggplant Rollatini</h2>,
     heading: "Fresh Mozzarella, ricotta, tomato basil sauce",
-    vigitable: <h2 className="text-2xl font-bold">*Tray –Chicken Martini</h2>,
+    vigitable: <h2 className="text-lg sm:text-2xl font-bold">*Tray –Chicken Martini</h2>,
     table: "With green peas, lemon white wine sauce ",
-    Braised: <h2 className="text-2xl font-bold">*Tray –Veal Marsala</h2>,
+    Braised: <h2 className="text-lg sm:text-2xl font-bold">*Tray –Veal Marsala</h2>,
     Peper: "With mushroom, Marsala wine sauce",
-    pasta: <h2 className="text-2xl font-bold">*Tray- Penne Ala Vodka</h2>,
+    pasta: <h2 className="text-lg sm:text-2xl font-bold">*Tray- Penne Ala Vodka</h2>,
     penne: "Penne Pasta with tomato vodka cream sauce",
     Party_menues: menuItems4,
   },
@@ -172,14 +172,14 @@ const PartyMenuModel = ({ isOpen, onClose }: Props) => {
       onClick={onClose}
     >
       <div
-        className="relative w-4/5 bg-white py-10 h-screen overflow-y-scroll text-[#400] rounded-md shadow-lg z-50"
+        className="relative w-11/12 sm:w-4/5 bg-white py-10 h-screen overflow-y-scroll text-[#400] rounded-md shadow-lg z-50"
         onClick={(e) => e.stopPropagation()} // Prevent modal close when clicking inside
       >
         <div className="flex flex-col gap-5">
           {menuTitle.map((item, index) => (
             <div key={index}>
               <div className="grid place-items-center">
-                <div className="w-full sm:w-[80%] lg:w-[70%] border-4 border-[#400] grid place-items-center p-4 sm:p-2">
+                <div className="w-[80%] lg:w-[70%] border-4 border-[#400] grid place-items-center p-2">
                   <div className="relative border-2 border-[#400] w-full grid place-items-center gap-4 text-center p-4">
                     <div className="w-3/4 sm:w-2/4 lg:w-1/3">
                       <img
@@ -188,8 +188,8 @@ const PartyMenuModel = ({ isOpen, onClose }: Props) => {
                       />
                     </div>
                     {/* ========== Party Menu 4 -> DESSERTS & COFFEE ======== */}
-                    <div className="absolute top-56">
-                      <h2 className="text-2xl sm:text-3xl font-bold">
+                    <div className="absolute top-[9%] md:top-[12%] xl:top-[15%]">
+                      <h2 className="text-lg sm:text-2xl md:text-3xl font-bold">
                         {item.desserts}
                       </h2>
                       <span>{item.person}</span>
@@ -197,14 +197,14 @@ const PartyMenuModel = ({ isOpen, onClose }: Props) => {
                     <div
                       className={
                         index === 3
-                          ? "mt-10 border-t border-b border-[#400] w-1/3 py-2"
-                          : "border-t border-b border-[#400] w-1/3 py-2"
+                          ? "mt-10 border-t border-b border-[#400] w-11/12 sm:w-1/3 py-2"
+                          : "border-t border-b border-[#400] w-11/12 sm:w-1/3 py-2"
                       }
                     >
                       {item?.title}
                     </div>
                     <div>
-                      <h2 className="text-2xl sm:text-3xl font-bold">
+                      <h2 className="text-lg sm:text-2xl md:text-3xl font-bold">
                         {item.appetizers}
                       </h2>
                       <span className="text-lg sm:text-xl">
@@ -227,7 +227,7 @@ const PartyMenuModel = ({ isOpen, onClose }: Props) => {
 
                       {index === 1 || index === 2 || index === 3 ? (
                         <div className="pb-6">
-                          <h2 className="text-2xl sm:text-3xl font-bold">
+                          <h2 className="text-lg sm:text-2xl md:text-3xl font-bold">
                             {item.pasta}
                           </h2>
                           <div className="text-lg sm:text-xl">{item.penne}</div>
@@ -236,7 +236,7 @@ const PartyMenuModel = ({ isOpen, onClose }: Props) => {
                         ""
                       )}
 
-                      <h2 className="text-2xl sm:text-3xl font-bold">
+                      <h2 className="text-lg sm:text-2xl md:text-3xl font-bold">
                         {item.entrees}
                       </h2>
                       <span className="text-lg sm:text-xl">
@@ -280,7 +280,7 @@ const PartyMenuModel = ({ isOpen, onClose }: Props) => {
                   </div>
                 </div>
                 <button
-                  className="absolute top-4 z-50 right-2 bg-white p-2 rounded shadow-md"
+                  className="absolute top-2 sm:top-4 z-50 right-2 bg-white p-1 sm:p-2 rounded shadow-md"
                   onClick={onClose}
                 >
                   <i className="fa fa-times" aria-hidden="true"></i>

@@ -26,16 +26,16 @@ const galleryItems = [
     title: "BAR MENU",
     url: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
   },
-  {
-    image: "assets/image/menusdrinks01.jpg",
-    title: "COCKTAILS",
-    url: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
-  },
-  {
-    image: "assets/image/menus03.jpg",
-    title: "DESSERTS",
-    url: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
-  },
+  // {
+  //   image: "assets/image/menusdrinks01.jpg",
+  //   title: "COCKTAILS",
+  //   url: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
+  // },
+  // {
+  //   image: "assets/image/menus03.jpg",
+  //   title: "DESSERTS",
+  //   url: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
+  // },
 ];
 
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
