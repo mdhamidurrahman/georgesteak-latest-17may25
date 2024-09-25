@@ -5,46 +5,30 @@ import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import ScrollImage from "./ScrollImage";
 import PartyMenuModel from "../../../Share/PartyMenuModel";
 import BarMenu from "../../../Share/ourMenueModel/BarMenu";
-import { set } from "react-datepicker/dist/date_utils";
-import SubBarMenu from "../../../Share/ourMenueModel/SubBarMenu";
-import { SpecialBMenuItemsheader } from "../../../Share/ArrayObject/Const";
 import SundayBrunch from "../../../Share/ourMenueModel/SundayBrunch";
+import LunchDinner from "../../../Share/ourMenueModel/LUNCH_DINNER/LunchDinner";
 
 const galleryItems = [
   {
     id: 1,
     image: "assets/image/menus01.jpg",
     title: "LUNCH PRIX-FIXED",
-    url: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
   },
   {
     id: 2,
     image: "assets/image/menus05.jpg",
     title: "LUNCH & DINNER",
-    url: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
   },
   {
     id: 3,
     image: "assets/image/menus04.jpg",
     title: "SUNDAY BRUNCH",
-    url: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
   },
   {
     id: 4,
     image: "assets/image/menusbarmenu.jpg",
     title: "BAR MENU",
-    url: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
   },
-  // {
-  //   image: "assets/image/menusdrinks01.jpg",
-  //   title: "COCKTAILS",
-  //   url: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
-  // },
-  // {
-  //   image: "assets/image/menus03.jpg",
-  //   title: "DESSERTS",
-  //   url: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
-  // },
 ];
 
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
@@ -57,19 +41,18 @@ export default function OurMenue() {
   const handleClick = () => {
     setIsOpenModel(!isOpenModel);
   };
+  const [lunchModel, setLunchModel] = useState(false);
   const [openModel, setOpenModel] = useState(false);
-
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // const handleRedirect = (url: any) => {
-  //   window.location.href = url;
-  // };
-
   const handleRedirect = (item: any) => {
+    if (item.id == 2) {
+      setLunchModel(true);
+    }
     if (item.id == 3) {
       setOpenModel(true);
     }
-    if (item.title === "BAR MENU") {
+    if (item.id == 4) {
       setIsModalOpen(true);
     }
   };
@@ -155,6 +138,12 @@ export default function OurMenue() {
           ))}
         </div>
 
+        {/* ================= LUNCH & DINNER ================= */}
+        {lunchModel && (
+          <div>
+            <LunchDinner onClose={() => setLunchModel(false)} />
+          </div>
+        )}
         {/* ================= SUNDAY BRUNCH Model ================= */}
         {openModel && (
           <div className="relative">

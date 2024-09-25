@@ -1,0 +1,67 @@
+import {
+  AppetizersArray,
+  AppetizersArray2,
+  PastasArray,
+  PastasArray2,
+  SoupSaladArray1,
+  SoupSaladArray2,
+} from "../../ArrayObject/Const";
+import Appetizers from "./Appetizers";
+import RawBar from "./RawBar";
+import SteaksChops from "./SteaksChops";
+type Props = {
+  onClose: () => void;
+};
+console.log("array", PastasArray);
+const LunchDinner = ({ onClose }: Props) => {
+  return (
+    <div className="fixed inset-0 flex items-center justify-center z-50">
+      <div
+        className="relative w-4/5 h-screen shadow-lg bg-white p-12"
+        style={{
+          overflowY: "scroll",
+          scrollbarWidth: "thin",
+          scrollbarColor: "rgba(0,0,0,0) rgba(0,0,0,0)",
+        }}
+      >
+        <button
+          className="absolute top-4 text-[#400] right-2 bg-[#FFB728] p-2 text-sm"
+          onClick={onClose}
+        >
+          X
+        </button>
+        <div className="border-[3px] border-[#400] p-2">
+          <div className="border-[1px] border-[#400] p-4 grid place-items-center">
+            <RawBar />
+            <h2 className="text-2xl tracking-[4px] font-semibold">
+              APPETIZERS
+            </h2>
+            <div className="flex justify-between pt-8 w-full">
+              <Appetizers list1={AppetizersArray} />
+              <Appetizers list2={AppetizersArray2} />
+            </div>
+            {/* ======== soup and salad ========= */}
+
+            <h2 className="text-2xl tracking-[4px] font-semibold">
+              SOUP & SALADS
+            </h2>
+            <div className="flex justify-evenly place-items-center w-full relative">
+              <div className="absolute h-[1px] w-[5%] top-36 left-[44.5%] opacity-50 bg-[#400] rotate-90"></div>
+              <Appetizers list3={SoupSaladArray1} />
+              <Appetizers list4={SoupSaladArray2} />
+            </div>
+
+            <SteaksChops />
+            {/* ======= Pastas ======= */}
+            <div className="flex justify-between w-full relative">
+              <Appetizers list5={PastasArray} />
+              <Appetizers list6={PastasArray2} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default LunchDinner;
