@@ -9,8 +9,8 @@ type Props = {
 };
 const Appetizers = ({ list1, list2, list3, list4, list5, list6 }: Props) => {
   return (
-    <div>
-      <div className="border-r-2 px-8">
+    <div className="w-full">
+      <div className="border-r-2 px-8 w-full">
         {list1?.map((item: any) => (
           <div key={item.id} className="text-center">
             <h3 className="text-xl font-semibold">

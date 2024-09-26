@@ -31,7 +31,7 @@ const Rawbarlist = [
 
 const RawBar = () => {
   return (
-    <div className="relative border-[3px] border-[#400] p-2 my-8 w-11/12">
+    <div className="relative border-[3px] border-[#400] p-2 my-8 w-11/12 2xl:w-4/5">
       <div className="border-[1px] border-[#400] p-4">
         <h1 className="text-2xl font-bold absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white px-4 py-2">
           RAW BAR
