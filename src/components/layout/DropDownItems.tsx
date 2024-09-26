@@ -5,10 +5,10 @@ const DropDownItems = () => {
     { name: "ORDER ONLINE SOON", href: "#order-online" },
     { name: "RESERVATION", href: "#reservation" },
     { name: "EVENT INQUERY", href: "#event-inquiry" },
-    { name: "GIFT CARDS", href: "#gift-cards" },
+    // { name: "GIFT CARDS", href: "#gift-cards" },
     { name: "EVENTS & SPECIALS", href: "#events-specials" },
     { name: "GALLERY", href: "#gallery" },
-    { name: "CONTACT", href: "#contact" },
+    // { name: "CONTACT", href: "#contact" },
     { name: "JOIN MAILING LIST", href: "#join-mailing-list" },
   ];
 

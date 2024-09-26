@@ -27,7 +27,7 @@ const XLScreenNavbar = () => {
     { name: <img src="assets/image/navAnimatedImg.svg" alt="EVENTS" className="h-[153px] w-[206px]" />, href: "#events-specials" },
     { name: "GALLERY", href: "#gallery" },
     // { name: "GIFT CARDS", href: "#gift-cards" },
-    { name: "CONTACT", href: "#contact" },
+    // { name: "CONTACT", href: "#contact" },
   ];
 
   const linksScrolled = [
@@ -38,7 +38,7 @@ const XLScreenNavbar = () => {
     { name: "EVENTS & SPECIALS", href: "#events-specials" },
     { name: "GALLERY", href: "#gallery" },
     // { name: "GIFT CARDS", href: "#gift-cards" },
-    { name: "CONTACT", href: "#contact" },
+    // { name: "CONTACT", href: "#contact" },
   ];
 
   const linksToShow = isScrolled ? linksScrolled : linksExpanded;
