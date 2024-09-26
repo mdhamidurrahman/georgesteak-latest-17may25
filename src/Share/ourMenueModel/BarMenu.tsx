@@ -8,7 +8,7 @@ const BarMenu = ({ onClose }: Props) => {
   return (
     <section className="fixed inset-0 flex items-center justify-center z-50">
       <div
-        className="relative w-4/5 h-screen shadow-lg bg-white"
+        className="relative w-11/12 sm:w-4/5 h-screen shadow-lg bg-white"
         style={{
           overflowY: "scroll",
           scrollbarWidth: "thin",
@@ -21,11 +21,11 @@ const BarMenu = ({ onClose }: Props) => {
         >
           X
         </button>
-        <div className="w-full h-[1000px] flex flex-col justify-between place-items-center bg-[#400] pt-64 pb-28">
+        <div className="w-full md:h-[1000px] flex flex-col justify-between place-items-center bg-[#400] md:pt-64 md:pb-28 py-12 md:py-0">
           <div className="w-1/3">
             <img src={heroImage} />
           </div>
-          <h2 className="text-[#FFB728]">@GEORGESTEAKHOUSE</h2>
+          <h2 className="text-[#FFB728] py-6 md:py-0">@GEORGESTEAKHOUSE</h2>
         </div>
         {/* ========= Bar Menu ========= */}
 
