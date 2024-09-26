@@ -4,37 +4,30 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import ScrollImage from "./ScrollImage";
 import PartyMenuModel from "../../../Share/PartyMenuModel";
+import BarMenu from "../../../Share/ourMenueModel/BarMenu";
+import SundayBrunch from "../../../Share/ourMenueModel/SundayBrunch";
+import LunchDinner from "../../../Share/ourMenueModel/LUNCH_DINNER/LunchDinner";
 
 const galleryItems = [
   {
+    id: 1,
     image: "assets/image/menus01.jpg",
     title: "LUNCH PRIX-FIXED",
-    url: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
   },
   {
+    id: 2,
     image: "assets/image/menus05.jpg",
     title: "LUNCH & DINNER",
-    url: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
   },
   {
+    id: 3,
     image: "assets/image/menus04.jpg",
     title: "SUNDAY BRUNCH",
-    url: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
   },
   {
+    id: 4,
     image: "assets/image/menusbarmenu.jpg",
     title: "BAR MENU",
-    url: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
-  },
-  {
-    image: "assets/image/menusdrinks01.jpg",
-    title: "COCKTAILS",
-    url: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
-  },
-  {
-    image: "assets/image/menus03.jpg",
-    title: "DESSERTS",
-    url: "https://www.opentable.com/r/george-seafood-and-steakhouse-greenwich",
   },
 ];
 
@@ -48,11 +41,21 @@ export default function OurMenue() {
   const handleClick = () => {
     setIsOpenModel(!isOpenModel);
   };
+  const [lunchModel, setLunchModel] = useState(false);
+  const [openModel, setOpenModel] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleRedirect = (url: any) => {
-    window.location.href = url;
+  const handleRedirect = (item: any) => {
+    if (item.id == 2) {
+      setLunchModel(true);
+    }
+    if (item.id == 3) {
+      setOpenModel(true);
+    }
+    if (item.id == 4) {
+      setIsModalOpen(true);
+    }
   };
-
   const imageUrl = "assets/image/preservations.jpg";
   useEffect(() => {
     gsap.to(imageRef.current, {
@@ -103,16 +106,16 @@ export default function OurMenue() {
 
   return (
     <div id="menus" className="bg-white menuMain">
-      <div className="relative">
-        {/* <div className="w-full flex justify-end">
+      {/* <div className="relative">
+        <div className="w-full flex justify-end">
           <img
             ref={imageRef}
             className="absolute flex z-[999] h-40 top-[-20px] w-52"
             src="assets/image/barlounge.jpg"
             alt=""
           />
-        </div> */}
-      </div>
+        </div>
+      </div> */}
 
       <div className="estd">
         <div className="animal">
@@ -127,13 +130,49 @@ export default function OurMenue() {
               <img src={item.image} alt={item.title} />
               <div
                 className="gallery-item-overlay cursor-pointer"
-                onClick={() => handleRedirect(item.url)}
+                onClick={() => handleRedirect(item)}
               >
                 <h3>{item.title}</h3>
               </div>
             </div>
           ))}
         </div>
+
+        {/* ================= LUNCH & DINNER ================= */}
+        {lunchModel && (
+          <div>
+            <LunchDinner onClose={() => setLunchModel(false)} />
+          </div>
+        )}
+        {/* ================= SUNDAY BRUNCH Model ================= */}
+        {openModel && (
+          <div className="relative">
+            <div className="fixed inset-0 flex items-center justify-center z-50">
+              <div
+                className="relative w-4/5 h-screen shadow-lg bg-white"
+                style={{
+                  overflowY: "scroll",
+                  scrollbarWidth: "thin",
+                  scrollbarColor: "rgba(0,0,0,0) rgba(0,0,0,0)",
+                }}
+              >
+                <SundayBrunch />
+                <button
+                  className="absolute top-2 text-[#400] right-1 bg-[#FFB728] p-2 text-sm"
+                  onClick={() => setOpenModel(false)}
+                >
+                  X
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+        {/* ================= Bar Model ================= */}
+        {isModalOpen && (
+          <div className="relative">
+            <BarMenu onClose={() => setIsModalOpen(false)} />
+          </div>
+        )}
         <a className="relative z-0 mb-10 cursor-pointer" onClick={handleClick}>
           PARTY PACKAGES
         </a>
