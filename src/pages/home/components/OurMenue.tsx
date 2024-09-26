@@ -7,6 +7,7 @@ import PartyMenuModel from "../../../Share/PartyMenuModel";
 import BarMenu from "../../../Share/ourMenueModel/BarMenu";
 import SundayBrunch from "../../../Share/ourMenueModel/SundayBrunch";
 import LunchDinner from "../../../Share/ourMenueModel/LUNCH_DINNER/LunchDinner";
+import LunchPrixFixed from "../../../Share/ourMenueModel/LUNCH_PRIX-FIXED/LunchPrixFixed";
 
 const galleryItems = [
   {
@@ -41,11 +42,15 @@ export default function OurMenue() {
   const handleClick = () => {
     setIsOpenModel(!isOpenModel);
   };
+  const [prixModel, setPrixModel] = useState(false);
   const [lunchModel, setLunchModel] = useState(false);
   const [openModel, setOpenModel] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleRedirect = (item: any) => {
+    if (item.id == 1) {
+      setPrixModel(true);
+    }
     if (item.id == 2) {
       setLunchModel(true);
     }
@@ -138,6 +143,8 @@ export default function OurMenue() {
           ))}
         </div>
 
+        {/* ================= PRIX-FIXE DLUNCH ================= */}
+        {prixModel && <LunchPrixFixed onClose={() => setPrixModel(false)} />}
         {/* ================= LUNCH & DINNER ================= */}
         {lunchModel && (
           <div>

@@ -354,6 +354,7 @@ export const PastasArray = [
     value: 42,
     desc: "mixed seafood, linguine, red sauce",
     sides: "SIDES",
+    subsides: "3 X 25",
   },
   // ==== SIDES =====
   {
@@ -372,7 +373,55 @@ export const PastasArray = [
       },
     ],
   },
+  {
+    listItems2: [
+      {
+        title: "BROCCOLI RABE",
+        value: 12,
+      },
+      {
+        title: "MUSHROOMS",
+        value: 10,
+      },
+      {
+        title: "BAKED POTATO",
+        value: 9,
+      },
+    ],
+  },
+  // ==== SUBSIDES 3 =====
+  {
+    listItems3: [
+      {
+        title: "DUCK FAT HOME FRIES WITH CHIVES",
+        value: 12,
+      },
+    ],
+  },
+  // ==== SUBSIDES 4 =====
+  {
+    listItems4: [
+      {
+        title: "GARLIC WHIPPED POTATOES 10 | SAUTÉED ONIONS",
+        value: 11,
+      },
+    ],
+  },
+  // ==== SUBSIDES 5 =====
+  {
+    listItems5: [
+      {
+        title: "ONION RINGS",
+        value: 11,
+      },
+      {
+        title: "TRUFFLE PARMESAN FRIES",
+        value: 12,
+      },
+    ],
+  },
 ];
+
 export const PastasArray2 = [
   {
     past: "ENTREES",
@@ -429,5 +478,88 @@ export const PastasArray2 = [
     title: "CRISPY SKIN WILD SALMON",
     value: 32,
     desc: "pan roasted in garlic, olive oil, white wine and herbs",
+  },
+];
+
+// ========== Starters =======
+export const StartersArray = [
+  {
+    title: "MINESTRONE",
+    desc1: "Vegetable soup",
+  },
+  {
+    title: "FRESH MOZZARELLA",
+    desc1: "Tomato, olive oil, balsamic drizzle",
+    desc2: "basil, red peppers",
+  },
+  {
+    title: "BABY GREENS",
+    desc1: "Mixed baby field greens, tomato, red onion",
+    desc2: "shaved parmesan, house dressing",
+  },
+  {
+    title: "CALAMARI FRITTI",
+    desc1: "Crispy calamari, tomato sauce",
+  },
+];
+
+export const StartersArray2 = [
+  {
+    title: "LOBSTER BISQUE",
+    desc1: "Lobster, cherry, cream",
+  },
+  {
+    title: "EGGPANT ROLLATINI",
+    desc1: "Fresh ricotta, fresh mozzarella",
+    desc2: "tomato basil sause",
+  },
+  {
+    title: "MEATBALLS",
+    desc1: "Tomato, basil, parmesan cheese",
+  },
+  {
+    title: "CAESAR SALAD",
+    desc1: "Chopped romaine, parmesan, garlic croutons",
+    desc2: "caesar dressing",
+    subtitle: "BAKED CLAMS OREGANATA",
+  },
+];
+
+// ====== ENTRIES =======
+export const entriesArray = [
+  {
+    title: "PENNE ALLA VODKA",
+    desc1: "Tomato vodka cream sauce",
+  },
+  {
+    title: "CAVATELLI",
+    desc1: "Broccoli rabe, sweet Italian sausages, garlic & oil",
+  },
+  {
+    title: "SPAGHETTI CARBONARA",
+    desc1: "Bacon, egg yolk, creamy parmesan cheese",
+  },
+  {
+    title: "VEAL MARSALLA",
+    desc1: "Veal scallopini, mushrooms, marsala wine sauce",
+  },
+];
+export const entriesArray2 = [
+  {
+    title: "CHICKEN SCARPARIELLO",
+    desc1: "Chicken breast, sweet sausages, cherry peppers",
+    desc2: "rosemary, garlic, white wine",
+  },
+  {
+    title: "CHICKEN MARTINI",
+    desc1: "Chicken breast, crusted parmesan, lemon, white wine",
+  },
+  {
+    title: "SOLE OREGANATA",
+    desc1: "Bread crumbs, lemon, white wine",
+  },
+  {
+    title: "NY STRIP STEAK 10 extra",
+    // desc1: " 10 extra",
   },
 ];

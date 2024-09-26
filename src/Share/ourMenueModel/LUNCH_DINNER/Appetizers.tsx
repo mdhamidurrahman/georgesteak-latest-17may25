@@ -1,4 +1,4 @@
-import React from "react";
+
 type Props = {
   list1?: any;
   list2?: any;
@@ -9,8 +9,8 @@ type Props = {
 };
 const Appetizers = ({ list1, list2, list3, list4, list5, list6 }: Props) => {
   return (
-    <div>
-      <div className="border-r-2 px-8">
+    <div className="w-full">
+      <div className="border-r-2 px-8 w-full">
         {list1?.map((item: any) => (
           <div key={item.id} className="text-center">
             <h3 className="text-xl font-semibold">
@@ -69,35 +69,46 @@ const Appetizers = ({ list1, list2, list3, list4, list5, list6 }: Props) => {
               {item.title} <sub>{item.value} </sub>
             </h3>
             <span className="text-[12px]"> {item.desc}</span>
-            <h2>{item.sides} </h2>
+            <h2 className="text-2xl font-bold tracking-[4px]">{item.sides} </h2>
+            <h4 className="text-sm font-semibold">{item.subsides} </h4>
             {/* ====== sides ====== */}
             <div className="flex place-items-center">
               {item?.listItems?.map((d: any) => (
-                <div className="flex border-r px-2">
+                <div className="border-r last:border-0 px-2">
+                  <h3>
+                    {d.title} <sub>{d.value} </sub>
+                  </h3>
+                </div>
+              ))}
+              {/* ====== sides List 2 ====== */}
+            </div>
+            <div className="flex place-items-center">
+              {item?.listItems2?.map((d: any) => (
+                <div className="border-r last:border-0 px-2">
                   <h3>
                     {d.title} <sub>{d.value} </sub>
                   </h3>
                 </div>
               ))}
             </div>
-            {/* ====== sides ====== */}
-            <div className="flex place-items-center">
-              {item?.listItems?.map((d: any) => (
-                <div className="flex border-r px-2">
-                  <h3>
-                    {d.title} <sub>{d.value} </sub>
-                  </h3>
-                </div>
-              ))}
-            </div>
-            {/* ====== sides ====== */}
-            <div className="flex place-items-center">
-              {item?.listItems?.map((d: any) => (
-                <div className="flex border-r px-2">
-                  <h3>
-                    {d.title} <sub>{d.value} </sub>
-                  </h3>
-                </div>
+            {/* ====== sides List 3 ====== */}
+            {item?.listItems3?.map((d: any) => (
+              <h3>
+                {d.title} <sub>{d.value} </sub>
+              </h3>
+            ))}
+            {/* ====== sides List 4 ====== */}
+            {item?.listItems4?.map((d: any) => (
+              <h3>
+                {d.title} <sub>{d.value} </sub>
+              </h3>
+            ))}
+            {/* ====== sides List 5 ====== */}
+            <div className="flex place-items-center justify-center">
+              {item?.listItems5?.map((d: any) => (
+                <h3>
+                  {d.title} <sub>{d.value} </sub>
+                </h3>
               ))}
             </div>
           </div>

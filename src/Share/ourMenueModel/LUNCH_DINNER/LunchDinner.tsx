@@ -12,7 +12,7 @@ import SteaksChops from "./SteaksChops";
 type Props = {
   onClose: () => void;
 };
-console.log("array", PastasArray);
+
 const LunchDinner = ({ onClose }: Props) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50">
@@ -36,7 +36,7 @@ const LunchDinner = ({ onClose }: Props) => {
             <h2 className="text-2xl tracking-[4px] font-semibold">
               APPETIZERS
             </h2>
-            <div className="flex justify-between pt-8 w-full">
+            <div className="flex flex-col md:flex-row justify-between pt-8 w-full">
               <Appetizers list1={AppetizersArray} />
               <Appetizers list2={AppetizersArray2} />
             </div>
@@ -45,7 +45,7 @@ const LunchDinner = ({ onClose }: Props) => {
             <h2 className="text-2xl tracking-[4px] font-semibold">
               SOUP & SALADS
             </h2>
-            <div className="flex justify-evenly place-items-center w-full relative">
+            <div className="flex flex-col md:flex-row justify-evenly place-items-center w-full relative">
               <div className="absolute h-[1px] w-[5%] top-36 left-[44.5%] opacity-50 bg-[#400] rotate-90"></div>
               <Appetizers list3={SoupSaladArray1} />
               <Appetizers list4={SoupSaladArray2} />
@@ -57,6 +57,11 @@ const LunchDinner = ({ onClose }: Props) => {
               <Appetizers list5={PastasArray} />
               <Appetizers list6={PastasArray2} />
             </div>
+            <span className="text-[6.5px] pt-3">
+              IF YOU HAVE ANY FOOD ALLERGIES SPEAK TO YOUR SERVER OF MANAGER.
+              CONSUMING RAW OR UNDERCOOKED MEATS, POULTRY, SEAFOOD, SHELLFISH,
+              OR EGGS MAY INCREASE YOUR RISK OF FOOD BORNE ILLNESS
+            </span>
           </div>
         </div>
       </div>
