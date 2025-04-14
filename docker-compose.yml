@@ -1,0 +1,5 @@
+services:
+  app:
+    image: steakhouse
+    ports:
+      - "8080:80"
