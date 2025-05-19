@@ -14,6 +14,9 @@ COPY . .
 # Build the Vite app
 RUN npm run build
 
+# Copy the test text file as testfile.txt
+COPY testfile.txt ./dist/
+
 # Step 2: Serve with a lightweight static file server (like nginx or http-server)
 FROM nginx:alpine
 
