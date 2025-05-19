@@ -28,7 +28,8 @@ jobs:
           git pull origin prod
 
           echo "Stop and remove old container if exists"
-          docker rm -f georgesteak-app-test || true
+          docker rm -f georgesteak-cicd || true
+          docker rmi georgesteak-by-cicd || true
 
           echo "Build Docker image"
           docker build -t georgesteak-by-cicd .
