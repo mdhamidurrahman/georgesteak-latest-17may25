@@ -1,9 +1,8 @@
-name: Deploy to EC2
+name: EC2 connection test
 
 on:
   push:
-    branches:
-      - main
+    branches: [prod]
 
 jobs:
   deploy:
@@ -16,10 +15,10 @@ jobs:
     - name: Set up SSH
       run: |
         mkdir -p ~/.ssh
-        echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/id_ed25519
-        chmod 600 ~/.ssh/id_ed25519
+        echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
         ssh-keyscan -H ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
 
-    - name: Connect and deploy
+    - name: SSH and deploy
       run: |
-        ssh root@${{ secrets.EC2_HOST }} "echo '✅ Connected! You can now run your deployment commands here.'"
+        ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no root@${{ secrets.EC2_HOST }} "echo 'SSH connected and command executed'"
