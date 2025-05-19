@@ -1,0 +1,2 @@
+#Need to use the below ports during build the docker container using below command:
+# docker run -d -p 3000:80 --name georgesteak-app-test final-georgesteak-17may25
