@@ -1,17 +1,14 @@
-name: EC2 connection test
+name: Deploy Docker App to EC2
 
 on:
   push:
-    branches: [prod]
+    branches: [main]  # Change if your branch is different
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-
     - name: Set up SSH
       run: |
         mkdir -p ~/.ssh
@@ -19,6 +16,25 @@ jobs:
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan -H ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
 
-    - name: SSH and deploy
+    - name: SSH into EC2 and deploy
       run: |
-        ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no root@${{ secrets.EC2_HOST }} "echo 'SSH connected and command executed'"
+        ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no root@${{ secrets.EC2_HOST }} << 'EOF'
+          set -e  # Exit on error
+
+          echo "Go to project folder"
+          cd /var/www/georgesteak-latest-17may25  # Change to your actual project path
+
+          echo "Pull latest code"
+          git pull origin prod
+
+          echo "Stop and remove old container if exists"
+          docker rm -f georgesteak-app-test || true
+
+          echo "Build Docker image"
+          docker build -t georgesteak-by-cicd .
+
+          echo "Run new container"
+          docker run -d --name georgesteak-cicd -p 3000:80 georgesteak-by-cicd
+
+          echo "Deployment complete"
+        EOF
