@@ -2,7 +2,7 @@ name: Deploy Docker App to EC2
 
 on:
   push:
-    branches: [main]  # Change if your branch is different
+    branches: [prod]  # Change if your branch is different
 
 jobs:
   deploy:
